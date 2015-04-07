@@ -1,0 +1,13 @@
+<div class="backdrop">
+  <div id="main">
+    <% if signed_in? %>
+      <%= render partial: "layouts/nav_bar_signedin" %>
+    <% else %>
+      <%= render partial: "layouts/nav_bar_login" %>
+    <% end %>
+    <p class="welcome-home"> Welcome Home </p>
+    <!-- <img src="assets/images/lanterns.jpg"> -->
+  </div>
+  <div id="login"></div>
+  <div id="signup"></div>
+</div>
