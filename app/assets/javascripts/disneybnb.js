@@ -5,12 +5,15 @@ window.disneyBnB = {
   Routers: {},
   initialize: function() {
     var user = new disneyBnB.Models.User();
-    // var user = user.fetch({url: })
-    var $rootEl = $('#navigation');
-
+    user = user.fetch({url: '../api/users'});
+    var $rootEl = $('.main');
+    var listings = new disneyBnB.Collections.Listings();
     new disneyBnB.Routers.Router({
-      $rootEl: $rootEl
+      $rootEl: $rootEl,
+      user: user,
+      listings: listings
     });
+    Backbone.history.start();
   }
 };
 

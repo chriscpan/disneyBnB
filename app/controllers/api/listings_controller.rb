@@ -25,7 +25,7 @@ module Api
 
     def index
       @listings = Listing.all
-      render json: @listings
+      render :index
     end
 
     private

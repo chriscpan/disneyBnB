@@ -1,0 +1,9 @@
+<h2> Listings Index </h2>
+
+<ul>
+<% listings.each( function(listing) { %>
+  <li>
+    <%= listing.escape('title') %>
+  </li>
+<% }) %>
+</ul>

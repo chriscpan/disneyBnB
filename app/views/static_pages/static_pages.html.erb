@@ -1,0 +1,11 @@
+<div class="navigation">
+  <% if signed_in? %>
+    <%= render partial: "layouts/nav_bar_signedin" %>
+  <% else %>
+    <%= render partial: "layouts/nav_bar_login" %>
+  <% end %>
+</div>
+
+<div class="main">
+
+</div> 
