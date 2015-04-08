@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
+//= require disneybnb
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
