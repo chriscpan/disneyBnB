@@ -1,13 +1,13 @@
 # Schema Information
 
 ## users
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-username    | string    | not null
-email       | string    | not null
-password_dig| string    | not null
-session_tok | string    | not null
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+username        | string    | not null
+email           | string    | not null
+password_digest | string    | not null
+session_token   | string    | not null
 
 ## profile
 column name | data type | details

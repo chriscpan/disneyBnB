@@ -61,7 +61,7 @@ Guest Login will be available now.
 
 [Details][phase-four]
 
-### Phase 5: Implement a Map Feature (~ 1.5 days)
+### Phase 5: Implement a Map Feature (~ 2 days)
 A third party API, which can display Google Maps is used. Users can see where
 the locations will be located exactly in regards to a map.
 
