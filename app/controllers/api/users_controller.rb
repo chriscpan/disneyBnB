@@ -8,6 +8,5 @@ module Api
         render json: @user.errors.full_messages, status: unprocessale_entity
       end
     end
-
   end
 end

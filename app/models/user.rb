@@ -8,6 +8,13 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  has_many(
+    :listings,
+    class_name: 'Listing',
+    foreign_key: :owner_id,
+    primary_key: :id
+  )
+
   def self.generate_session_token
     begin
       token = SecureRandom.urlsafe_base64

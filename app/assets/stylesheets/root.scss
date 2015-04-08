@@ -1,19 +1,31 @@
-.welcome-home {
+.root-text {
   text-align: center;
-  text-transform: uppercase;
   font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 50px;
   display: block;
   font-weight: bold;
+  margin-bottom: 50%;
+  color: #fff;
+}
+.welcome-home {
+  text-transform: uppercase;
+  font-size: 50px;
+  display: block;
   height: 66px;
   margin-bottom: 50%;
   line-height: 66px;
   color: #fff;
 }
 
+.clone-text {
+  font-size: 24px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
 .backdrop {
-  width: 864px;
-  min-height: 900px;
+  // position: relative;
+  width: 100%;
+  min-height: 100%;
   background: url("/assets/up_house.jpg") no-repeat;
   // background-color: black;
   background-size: cover;
