@@ -5,8 +5,8 @@ window.disneyBnB = {
   Routers: {},
   initialize: function() {
     var user = new disneyBnB.Models.User();
-    user = user.fetch({url: '../api/users'});
-    var $rootEl = $('.main');
+    // user = user.fetch({url: '../api/users'});
+    var $rootEl = $('#main');
     var listings = new disneyBnB.Collections.Listings();
     new disneyBnB.Routers.Router({
       $rootEl: $rootEl,

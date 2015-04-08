@@ -1,5 +1,5 @@
 disneyBnB.Views.ListingIndex = Backbone.View.extend({
-  template: JST['templates/listingsIndex'],
+  template: JST['listing/listingIndex'],
 
   initialize: function(){
     this.listenTo(this.collection, 'sync', this.render);
@@ -10,6 +10,6 @@ disneyBnB.Views.ListingIndex = Backbone.View.extend({
       listings: this.collection
     });
     this.$el.html(content);
-    return this;  
+    return this;
   }
 });
