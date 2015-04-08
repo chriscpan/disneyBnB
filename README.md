@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: http://flux-capacitr.herokuapp.com
+[heroku]: https://disneybnb.herokuapp.com/
 
 ## Minimum Viable Product
 disneyBnB is a clone of airBnB built on Rails and Backbone. Users can:
