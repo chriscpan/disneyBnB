@@ -34,10 +34,12 @@ status      | string    | default: true
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-owner_id    | integer   |
-reserve_id  | integer   |  
-request_id  | integer   |  
-description | string    |  
+owner_id    | integer   | not null, foreign key (references users)
+description | string    |
+price       | integer   | not null
+title       | string    | not null
+address     | string    | not null
+capacity    | integer   | not null
 
 ## images
 column name | data type | details
@@ -62,3 +64,4 @@ author_id       | integer   | not null, foreign key (references user)
 profile_id      | string    | not null, foreign key (references user)
 listing_id      | string    | not null, foreign key (references listing)
 content         | string    | not null
+rating          | integer   | not null
