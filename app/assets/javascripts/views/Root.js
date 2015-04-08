@@ -6,7 +6,6 @@ disneyBnB.Views.Root = Backbone.View.extend({
   },
 
   render: function(){
-    debugger
     var content = this.template();
     this.$el.html(content);
     return this;

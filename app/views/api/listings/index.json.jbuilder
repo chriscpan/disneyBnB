@@ -3,4 +3,4 @@
 # end
 
 
-json.array! @listings, :owner_id, :price, :capacity, :address, :description, :title
+json.array! @listings, :id, :owner_id, :price, :capacity, :address, :description, :title

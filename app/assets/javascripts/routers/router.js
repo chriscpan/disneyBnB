@@ -8,7 +8,7 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
   routes: {
     '': 'root',
     'listings': 'index',
-    '../listings/:id': 'show',
+    'listings/:id': 'show',
   },
 
   root: function(){
@@ -27,7 +27,8 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
   show: function(id){
     var listing = this.listings.getOrFetch(id);
     var v = new disneyBnB.Views.ListingShow({
-      model: listing
+      model: listing,
+      collection: this.listings
     });
     this._swapView(v);
   },

@@ -1,11 +1,10 @@
 module Api
   class ListingsController < ApiController
     def show
-      @listing = Listing.includes(
-        :images, :location, :reservations).find(params[:id])
+      @listing = Listing.find(params[:id])
 
       if @listing
-        render json: @listing
+        render :show
       else
         render json:
           @listing.errors.full_messages, status: :unprocessable_entity
