@@ -39,9 +39,7 @@ will have the majority of the CSS finished.
 ### Phase 2: Viewing listings and their description (~2 days)
 I will add API routes to listings. Each listing will also have a description of the listing. This is done by creating Backbone collections and models that fetch data from these routes.
 
-At the end of this phase, users will be able to go to specific listings to view
-that location's description. The majority of CSS for these location should be
-finished.
+At the end of this phase, users will be able to go to specific listings to view that location's description. The majority of CSS for these location should be finished.
 
 [Details][phase-two]
 
@@ -50,7 +48,7 @@ A third party API, which can display Google Maps is used. Users can see where th
 
 A split screen subview will be implemented to have the maps display and the location listing simultaneously.
 
-[Details][phase-five]
+[Details][phase-three]
 
 ### Phase 4: Own Listing and Profile (~1 days)
 A form to list your space will be added. Profiles now include views to see and make
@@ -66,7 +64,7 @@ be added. Seed data for user profiles will also be created.
 
 A search bar will be added that updates in real time.
 
-[Details][phase-three]
+[Details][phase-five]
 
 
 ### Phase 6: Touch Up (~ 2 days)
