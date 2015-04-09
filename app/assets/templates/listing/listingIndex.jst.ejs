@@ -1,12 +1,17 @@
 <h2> Listings Index </h2>
 
-<div class=""
-<ul>
-<% listings.each( function(listing) { %>
-  <li>
-    <a href="#/listings/<%= listing.get('id') %>">
-      <%= listing.escape('title') %>
-    </a>
-  </li>
-<% }) %>
-</ul>
+<div class="listing-index">
+  <ul>
+  <% listings.each( function(listing) { %>
+    <li>
+      <a href="#/listings/<%= listing.get('id') %>">
+        <%= listing.escape('title') %>
+      </a>
+    </li>
+  <% }) %>
+  </ul>
+</div>
+<br>
+<div id='map-canvas'>
+  <p> something </p>
+</div>
