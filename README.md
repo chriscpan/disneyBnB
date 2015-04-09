@@ -15,7 +15,7 @@ disneyBnB is a clone of airBnB built on Rails and Backbone. Users can:
 - [ ] Book locations
 - [ ] Create comments for locations
 - [ ] Rate locations
-- [ ] View details for a location
+- [x] View details for a location
 - [ ] View and edit your profile
 - [ ] See other's profile
 
@@ -45,13 +45,12 @@ finished.
 
 [Details][phase-two]
 
-### Phase 3: Viewing Profiles(~1 days)
-I will add API routes to user profiles. Comments for profiles and listings will
-be added. Seed data for user profiles will also be created.
+### Phase 3: Implement a Map Feature (~ 2 days)
+A third party API, which can display Google Maps is used. Users can see where the locations will be located exactly in regards to a map.
 
-A search bar will be added that updates in real time.
+A split screen subview will be implemented to have the maps display and the location listing simultaneously.
 
-[Details][phase-three]
+[Details][phase-five]
 
 ### Phase 4: Own Listing and Profile (~1 days)
 A form to list your space will be added. Profiles now include views to see and make
@@ -61,23 +60,17 @@ Guest Login will be available now.
 
 [Details][phase-four]
 
-### Phase 5: Implement a Map Feature (~ 2 days)
-A third party API, which can display Google Maps is used. Users can see where
-the locations will be located exactly in regards to a map.
+### Phase 5: Viewing Profiles(~1 days)
+I will add API routes to user profiles. Comments for profiles and listings will
+be added. Seed data for user profiles will also be created.
 
-A split screen subview will be implemented to have the maps display and the
-location listing simultaneously.
+A search bar will be added that updates in real time.
 
-I'll need to add `search` routes to both the Blogs and Posts controllers. On the
-Backbone side, there will be a `SearchResults` composite view has `BlogsIndex`
-and `PostsIndex` subviews. These views will use plain old `blogs` and `posts`
-collections, but they will fetch from the new `search` routes.
+[Details][phase-three]
 
-[Details][phase-five]
 
 ### Phase 6: Touch Up (~ 2 days)
-Finish the CSS and find out if there are any glitches in the application.
-Refactor the code.
+Finish the CSS and find out if there are any glitches in the application. Refactor the code.
 
 [Details][phase-six]
 

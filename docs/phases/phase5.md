@@ -1,21 +1,25 @@
-# Phase 5: Implement a Map feature
+# Phase 3: Viewing Profiles
 
 ## Rails
 ### Models
 
 ### Controllers
-Api::BlogsController (search)
-Api::PostsController (search)
+Api::ProfilesController(show, edit)
+Api::CommentsController(new, show, delete)
 
 ### Views
+* profiles/show.json.jbuilder
 
 ## Backbone
 ### Models
-* locations
-### Collections
-* locations
-### Views
-* locationShow (subView)
-## Gems/Libraries
+* listings
+* comments
 
-* GoogleMaps API
+### Collections
+* listings
+* comments
+
+### Views
+* profileShow
+
+## Gems/Libraries
