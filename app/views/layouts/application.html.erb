@@ -5,6 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <% if Rails.env.production? %>
+    <% api_key = "key=AIzaSyDd3JEaHouFFcZ7bYC0rP4EKD5no8bwNYo" %>
+  <% else %>
+    <% api_key = '' %>
+  <% end %>
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?<%= api_key %>"></script>
 </head>
 <body>
 
