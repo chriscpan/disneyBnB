@@ -1,14 +1,13 @@
-<h2> Listings Index </h2>
-
-<div class="listing-index">
-  <ul>
-  <% listings.each( function(listing) { %>
-    <li>
-      <a href="#/listings/<%= listing.get('id') %>">
-        <%= listing.escape('title') %>
-      </a>
-    </li>
-  <% }) %>
-  </ul>
+<div class="listing-container group">
+  <div class="listing-index">
+    <ul>
+    <% listings.each( function(listing) { %>
+      <li>
+        <a href="#/listings/<%= listing.get('id') %>">
+          <%= listing.escape('title') %>
+        </a>
+      </li>
+    <% }) %>
+    </ul>
+  </div>
 </div>
-<br>
