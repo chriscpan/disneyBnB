@@ -46,7 +46,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 listing_id  | integer   | not null, foreign key (references listing)
-picture     | integer   | not null
+picture     | string    | not null
 
 ## location
 column name | data type | details

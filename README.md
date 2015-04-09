@@ -37,7 +37,7 @@ will have the majority of the CSS finished.
 [Details][phase-one]
 
 ### Phase 2: Viewing listings and their description (~2 days)
-I will add API routes to listings. Each location will also have a description of the location. This is done by creating Backbone collections and models that fetch data from these routes.
+I will add API routes to listings. Each listing will also have a description of the listing. This is done by creating Backbone collections and models that fetch data from these routes.
 
 At the end of this phase, users will be able to go to specific listings to view
 that location's description. The majority of CSS for these location should be

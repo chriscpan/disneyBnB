@@ -1,0 +1,122 @@
+.summary {
+  border-bottom: 1px solid #ccc;
+}
+.show .cover-photo {
+  background-color: #77597f;
+  width: 100%;
+  height: 402px;
+}
+
+.show .title {
+  text-align: center;
+}
+
+.show .address {
+  text-align: center;
+}
+
+.pricing {
+  position: relative;
+  background-color: rgba(60,63,64,0.9);
+  color: #fff;
+  height: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-transform: capitalize;
+  z-index: 1001;
+  display: block;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.price {
+  float: left;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: block;
+  font-size: 24px;
+  font-weight:normal;
+  height:38px;
+  line-height: 26px;
+
+}
+
+.day {
+  float: right;
+  padding-bottom: 9px;
+  padding-top: 9px;
+  display: block;
+  font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  height: 38px;
+  line-height: 20px;
+}
+
+.show {
+  color: rgb(86, 90, 92)
+}
+
+.about-listing {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.details h3 {
+  // text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: 19px;
+  line-height: 19px;
+}
+
+.about-listing .description {
+  font-size: 14px;
+  color: rgb(86, 90, 92);
+  font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+}
+
+.image-container {
+  position: relative;
+  height: 282px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.image-one {
+  height: 282px;
+  width: 50% - 0.5;
+  float: left;
+  border: 1px solid black;
+  display: block;
+  background-color: #8989FF;
+}
+
+.image-two {
+  display: block;
+  height: 282px;
+  width: 50% - 0.5;
+  float: right;
+  border: 1px solid black;
+  background-color: #8989FF;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.panel {
+  display: block;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.listing-comments {
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
+  border-top: 1px solid #ccc;
+}

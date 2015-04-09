@@ -1,1 +1,39 @@
-<h2> <%= listing.get('title')%> </h2>
+<div class="show">
+  <div class="cover-photo">
+
+  </div>
+  <br>
+  <div class="summary">
+    <h2 class="title"> <%= listing.get('title')%> </h2>
+    <p class="address"><%= listing.get('address') %></p>
+    <br>
+    <div class="pricing">
+      <p class="price">$<%= listing.get('price') %></p>
+      <p class="day">Per Night </p>
+    </div>
+    <br>
+    <br>
+  </div>
+
+  <!-- <p class="capacity"><%= listing.get('capacity') %></p>
+  <br> -->
+  <div class=details>
+    <div class=about-listing>
+      <h3> About This Listing </h3>
+      <p class="description"><%= listing.get('description') %></p>
+    </div>
+    <div class='image-container group'>
+      <div class='image-one'>
+        <p> image 1</p>
+      </div>
+      <div class='image-two'>
+        <p> image 2 </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class=panel>
+    <br>
+    <p class="listing-comments"> Insert some comments here </p>
+  </div>
+</div>
