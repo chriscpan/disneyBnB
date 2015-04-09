@@ -7,4 +7,11 @@ class Listing < ActiveRecord::Base
     foreign_key: :owner_id,
     primary_key: :id
   )
+
+  has_one(
+    :location,
+    class_name: 'Location',
+    foreign_key: :listing_id,
+    primary_key: :id
+  )
 end

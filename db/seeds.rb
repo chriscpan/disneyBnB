@@ -25,3 +25,7 @@ listing2 = Listing.create( price: 100, capacity: 2, title: 'The Sky',
 listing3 = Listing.create( price: 200, capacity: 2, title: 'Elephant Graveyard',
  address: '123 King', description: 'lions!', owner_id: 3
 )
+
+location1 = Location.create(listing_id: 1, longitude: -122, latitude: 37)
+location2 = Location.create(listing_id: 2, longitude: -122, latitude: 37)
+location3 = Location.create(listing_id: 3, longitude: -122, latitude: 37)

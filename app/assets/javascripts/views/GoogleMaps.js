@@ -3,9 +3,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     id: "map-canvas"
   },
 
-  initialize: function() {
-
-  },
 
   render: function(){
     var mapOptions = {
