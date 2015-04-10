@@ -63,8 +63,8 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     var view = this;
 
     var latLng = new google.maps.LatLng(
-      37.7833,
-      -122.4167
+      listing.get('latitude'),
+      listing.get('longitude')
     );
 
     var marker = new google.maps.Marker({

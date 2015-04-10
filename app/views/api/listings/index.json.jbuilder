@@ -6,8 +6,8 @@
 # json.array! @listings, :id, :owner_id, :price, :capacity, :address, :description, :title
 
 json.array! @listings do |listing|
-  json.extract! listing, :id, :owner_id, :price, :capacity, :address, :description, :title
-  json.location do
-    json.extract! listing.location, :id, :listing_id, :longitude, :latitude
-  end
+  json.extract! listing, :id, :owner_id, :price, :capacity, :address, :description, :title, :latitude, :longitude
+  # json.location do
+  #   json.extract! listing.location, :id, :listing_id, :longitude, :latitude
+  # end
 end
