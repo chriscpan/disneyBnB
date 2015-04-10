@@ -12,7 +12,6 @@ disneyBnB.Views.ListingIndex = Backbone.View.extend({
     });
     this.$el.html(content);
     var v = new disneyBnB.Views.GoogleMaps({
-      // model: this.collection.first()
       collection: this.collection
     });
     this.$('.listing-container').append(v.$el);
