@@ -46,7 +46,7 @@ listing1 = Listing.create(
   description: 'olaf!',
   owner_id: 1,
   latitude: 37.7850,
-  longitude: -122.4180
+  longitude: -122.4280
 )
 
 listing2 = Listing.create(
@@ -56,8 +56,8 @@ listing2 = Listing.create(
   address: '123 Sky',
   description: 'balloons!',
   owner_id: 2,
-  latitude: 37.7800,
-  longitude: -122.4160
+  latitude: 37.7750,
+  longitude: -122.4090
 )
 
 listing3 = Listing.create(

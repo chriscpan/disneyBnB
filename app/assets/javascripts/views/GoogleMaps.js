@@ -10,8 +10,8 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   },
 
   attachMapListeners: function () {
-    google.maps.event.addListener(this._map, 'idle', this.search.bind(this));
-    google.maps.event.addListener(this._map, 'click', this.createListing.bind(this));
+    google.maps.event.addListener(map, 'idle', this.search.bind(this));
+    // google.maps.event.addListener(this._map, 'click', this.createListing.bind(this));
   },
 
   initMap: function () {
@@ -20,9 +20,10 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
       zoom: 12
     };
 
-    this._map = new google.maps.Map(this.el, mapOptions);
+    map = new google.maps.Map(this.el, mapOptions);
 
     this.collection.each(this.addMarker.bind(this));
+    // this.attachMapListeners();
   },
 
   showMarkerInfo: function (event, marker) {
@@ -30,7 +31,7 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
       content: marker.title
     });
 
-    infoWindow.open(this._map, marker);
+    infoWindow.open(map, marker);
   },
 
   removeMarker: function (listing) {
@@ -50,7 +51,7 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
 
     var marker = new google.maps.Marker({
       position: latLng,
-      map: this._map,
+      map: map,
       title: listing.get('title')
     });
 

@@ -9,11 +9,11 @@ window.disneyBnB = {
     var $rootEl = $('#main');
     var listings = new disneyBnB.Collections.Listings();
     this.navView = new disneyBnB.Views.ListingSearch({
-      el: $(".listing-search"),
+      el: $('.listing-search'),
       collection: listings
     });
-    $(".listing-search").html(this.navView.render().$el);
-    debugger;
+
+    // $('.listing-search').html(this.navView.render().$el);
     new disneyBnB.Routers.Router({
       $rootEl: $rootEl,
       user: user,
