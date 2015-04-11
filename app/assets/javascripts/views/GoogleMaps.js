@@ -9,11 +9,7 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     this.listenTo(this.collection, 'remove', this.removeMarker);
   },
 
-  attachMapListeners: function () {
-    google.maps.event.addListener(map, 'idle', this.search.bind(this));
-    // google.maps.event.addListener(this._map, 'click', this.createListing.bind(this));
-  },
-
+  // longitude: D, Latitude: k
   initMap: function () {
     var mapOptions = {
       center: { lat: 37.7833, lng: -122.4167},
@@ -23,7 +19,14 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     map = new google.maps.Map(this.el, mapOptions);
 
     this.collection.each(this.addMarker.bind(this));
-    // this.attachMapListeners();
+    this.attachMapListeners();
+  },
+
+  attachMapListeners: function () {
+    google.maps.event.addListener(map, 'bounds_changed', this.setBounds.bind(this));
+    google.maps.event.addListener(searchBox, 'places_changed', this.addPin.bind(this));
+    // google.maps.event.addListener(map, 'idle', this.search.bind(this));
+    // google.maps.event.addListener(this._map, 'click', this.createListing.bind(this));
   },
 
   showMarkerInfo: function (event, marker) {
@@ -62,28 +65,64 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     this._markers[listing.id] = marker;
   },
 
-  search: function () {
-    var mapBounds = this._map.getBounds();
-    var ne = mapBounds.getNorthEast();
-    var sw = mapBounds.getSouthWest();
+  // search: function () {
+  //   var mapBounds = map.getBounds();
+  //   var ne = mapBounds.getNorthEast();
+  //   var sw = mapBounds.getSouthWest();
+  //
+  //   var filterData = {
+  //     lat: [sw.lat(), ne.lat()],
+  //     lng: [sw.lng(), ne.lng()]
+  //   };
+  //
+  //   this.collection.fetch({
+  //     data: { filter_data: filterData }
+  //   });
+  // },
+  //
+  // startBounce: function (id) {
+  //   var marker = this._markers[id];
+  //   marker.setAnimation(google.maps.Animation.BOUNCE);
+  // },
+  //
+  // stopBounce: function (id) {
+  //   var marker = this._markers[id];
+  //   marker.setAnimation(null);
+  // },
 
-    var filterData = {
-      lat: [sw.lat(), ne.lat()],
-      lng: [sw.lng(), ne.lng()]
+  setBounds: function() {
+    console.log('change bounds');
+    var bounds = map.getBounds();
+    searchBox.setBounds(bounds);
+  },
+
+  addPin: function() {
+    var places = searchBox.getPlaces();
+    console.log(places);
+    // debugger
+    if (places.length === 0) {
+      return;
+    }
+    var bounds = new google.maps.LatLngBounds();
+    var place = places[0];
+
+    var image = {
+      url: place.icon,
+      size: new google.maps.Size(71,71),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(17, 34),
+      scaledSize: new google.maps.Size(25, 25)
     };
 
-    this.collection.fetch({
-      data: { filter_data: filterData }
+    var marker = new google.maps.Marker({
+      map: map,
+      icon: image,
+      title: place.name,
+      position: place.geometry.location
     });
-  },
 
-  startBounce: function (id) {
-    var marker = this._markers[id];
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  },
-
-  stopBounce: function (id) {
-    var marker = this._markers[id];
-    marker.setAnimation(null);
+    this._markers[0] = marker;
+    bounds.extend(place.geometry.location);
+    map.fitBounds(bounds);
   }
 });

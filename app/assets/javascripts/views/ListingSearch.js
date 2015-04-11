@@ -14,18 +14,18 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
   init_searchBar: function() {
     var content = this.template();
     this.$el.html(content);
-    this.searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0])
+    searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0])
     this.attachListeners();
   },
 
   attachListeners: function() {
-    google.maps.event.addListener(_map, 'bounds_changed', this.setBounds(this));
+    // google.maps.event.addListener(map, 'bounds_changed', this.setBounds(this));
   },
 
   setBounds: function(){
 
   },
-  
+
   renderListings: function(){
     this.$el.find('.listing-result').empty();
 
