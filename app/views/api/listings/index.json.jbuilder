@@ -11,3 +11,6 @@ json.array! @listings do |listing|
   #   json.extract! listing.location, :id, :listing_id, :longitude, :latitude
   # end
 end
+
+# listings.location.get()
+# listing.attributes.location.latitude
