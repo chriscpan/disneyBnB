@@ -1,4 +1,5 @@
 disneyBnB.Collections.Listings = Backbone.Collection.extend({
+  // url: '/api/listings/search',
   url: '/api/listings',
 
   model: disneyBnB.Models.Listing,

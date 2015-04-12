@@ -15,37 +15,35 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     var content = this.template();
     this.$el.html(content);
     searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0])
-    this.attachListeners();
+    this.attachMapListeners();
   },
 
-  attachListeners: function() {
-    // google.maps.event.addListener(map, 'bounds_changed', this.setBounds(this));
+  attachMapListeners: function(){
+    google.maps.event.addListener(searchBox, 'places_changed', this.getListings.bind(this))
   },
 
-  setBounds: function(){
-
-  },
-
-  renderListings: function(){
-    this.$el.find('.listing-result').empty();
+  getListings: function(){
+    console.log('getListings!');
 
     // this.collection.fetch({
-    //   data: function(){
+    //   data: {search: {
     //
     //   },
     //   success: function(){
-            // this.collection.each( function(listing) {
-            // });
+    //     this.collection.each( function(listing) {
+    //         });
     //   }
     // });
   },
 
-  updateCities: function(){
+  updateCities: function(event){
     // debugger
     if (this.input.val() === "") {
       this.render([]);
       return ;
     }
     // this.render(this.input.val());
+
+    console.log('hello')
   }
 });

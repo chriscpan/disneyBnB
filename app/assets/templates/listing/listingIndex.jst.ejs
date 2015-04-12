@@ -2,7 +2,7 @@
   <div class="listing-index">
     <ul>
     <% listings.each( function(listing) { %>
-      <li>
+      <li class='listings'>
         <a href="#/listings/<%= listing.get('id') %>">
           <%= listing.escape('title') %>
         </a>

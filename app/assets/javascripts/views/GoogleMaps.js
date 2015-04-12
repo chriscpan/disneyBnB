@@ -65,20 +65,20 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     this._markers[listing.id] = marker;
   },
 
-  // search: function () {
-  //   var mapBounds = map.getBounds();
-  //   var ne = mapBounds.getNorthEast();
-  //   var sw = mapBounds.getSouthWest();
-  //
-  //   var filterData = {
-  //     lat: [sw.lat(), ne.lat()],
-  //     lng: [sw.lng(), ne.lng()]
-  //   };
-  //
-  //   this.collection.fetch({
-  //     data: { filter_data: filterData }
-  //   });
-  // },
+  search: function () {
+    var mapBounds = map.getBounds();
+    var ne = mapBounds.getNorthEast();
+    var sw = mapBounds.getSouthWest();
+
+    var filterData = {
+      lat: [sw.lat(), ne.lat()],
+      lng: [sw.lng(), ne.lng()]
+    };
+
+    this.collection.fetch({
+      data: { filter_data: filterData }
+    });
+  },
   //
   // startBounce: function (id) {
   //   var marker = this._markers[id];
@@ -97,6 +97,13 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   },
 
   addPin: function() {
+
+    var marker = this._markers[0];
+    if (marker) {
+      marker.setMap(null);
+      delete this._markers[0];
+    }
+
     var places = searchBox.getPlaces();
     console.log(places);
     // debugger

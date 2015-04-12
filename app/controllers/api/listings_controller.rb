@@ -1,6 +1,7 @@
 module Api
   class ListingsController < ApiController
     def show
+      # debugger
       @listing = Listing.find(params[:id])
 
       if @listing
@@ -28,18 +29,15 @@ module Api
     end
 
     def search
-      if params[:query].present?
-        @listings = Listing.where("title ~ ?", params[:query])
-      else
-        @listings = Listing.none
-      end
-
-      respond_to do |format|
-        format.html { render :search }
-        format.json { render :search }
-      end
+      debugger
+      @listings = filter_listings(filter_options)
+      render json: @listings
     end
-    
+
+    def filter
+
+    end
+
     private
 
     def filter_options
