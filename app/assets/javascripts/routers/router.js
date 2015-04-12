@@ -36,7 +36,7 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
 
   new: function() {
     var listing = new disneyBnB.Models.Listing();
-    var v = new disneyBmB.Views.ListingNew({
+    var v = new disneyBnB.Views.ListingNew({
       model: listing,
       collection: this.listings
     })
