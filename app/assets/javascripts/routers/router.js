@@ -8,6 +8,7 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
   routes: {
     '': 'root',
     'listings': 'index',
+    'listings/new': 'new',
     'listings/:id': 'show',
   },
 
@@ -30,6 +31,15 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
       model: listing,
       collection: this.listings
     });
+    this._swapView(v);
+  },
+
+  new: function() {
+    var listing = new disneyBnB.Models.Listing();
+    var v = new disneyBmB.Views.ListingNew({
+      model: listing,
+      collection: this.listings
+    })
     this._swapView(v);
   },
 
