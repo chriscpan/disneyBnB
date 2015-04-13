@@ -25,7 +25,8 @@ module Api
 
     def index
       @listings = Listing.all
-      render :index
+      # @listings = search
+      # render :index
     end
     # google maps search
     # def search
@@ -35,8 +36,11 @@ module Api
     # end
 
     def search
-      
+      # if params[:search]
+      #   fail
+      # end
     end
+
     private
 
     def filter_options

@@ -70,3 +70,14 @@ listing3 = Listing.create(
   latitude: 37.7833,
   longitude: -122.4167
 )
+
+listing4 = Listing.create(
+  price: 400,
+  capacity: 4,
+  title: 'Atlantica',
+  address: '123 Atlantis',
+  description: "The kingdom is located beneath the Pacific Ocean and is ruled by the sea king, King Triton. Atlantica's most famous residents are none other than King Triton's adventurous daughter Ariel, her best friend Flounder and the court composer crab Sebastian. These friends usually get Atlantica in hot water but cleans up the mess they sometimes start. The Kingdom was once ruled for a short time by the evil sea witch and former member of the royal court of King Triton, Ursula.",
+  owner_id: 5,
+  latitude: 37.76244,
+  longitude: -122.5550
+)

@@ -2,6 +2,7 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
   template: JST['listing/listingSearch'],
 
   initialize: function(options){
+    this.$el.find('input')
     this.init_searchBar();
   },
 
@@ -25,9 +26,10 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     console.log('getListings!');
     var lat = event.getPlaces()[0].geometry.location.k;
     var lng = event.getPlaces()[0].geometry.location.D;
+    debugger
     // this.collection.fetch({
     //   data: {search: {
-    //
+    //    location
     //   },
     //   success: function(){
     //     myview.collection.each( function(listing) {
