@@ -8,10 +8,10 @@ window.disneyBnB = {
     // user = user.fetch({url: '../api/users'});
     var $rootEl = $('#main');
     var listings = new disneyBnB.Collections.Listings();
-    // this.navView = new disneyBnB.Views.ListingSearch({
-    //   el: $('.listing-search'),
-    //   collection: listings
-    // });
+    this.navView = new disneyBnB.Views.ListingSearch({
+      el: $('.listing-search'),
+      collection: listings
+    });
 
     // $('.listing-search').html(this.navView.render().$el);
     new disneyBnB.Routers.Router({
