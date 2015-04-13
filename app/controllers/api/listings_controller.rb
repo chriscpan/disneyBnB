@@ -2,13 +2,13 @@ module Api
   class ListingsController < ApiController
     def show
       # debugger
-      @listing = Listing.find(params[:id])
+      @listing = Listing.includes(:images).find(params[:id])
 
       if @listing
-        render json: @listing
+        render :show
       else
         render json:
-          @listing.errors.full_messages, status: :unprocessable_entity
+        @listing.errors.full_messages, status: :unprocessable_entity
       end
     end
 
@@ -19,7 +19,7 @@ module Api
         render json: @listing
       else
         render json:
-          @listing.errors.full_messages, status: :unprocessable_entity
+        @listing.errors.full_messages, status: :unprocessable_entity
       end
     end
 
@@ -28,7 +28,7 @@ module Api
       if params[:search]
         @listings = search
       else
-        @listings = Listing.all
+        @listings = Listing.includes(:images).all
       end
     end
 
@@ -37,7 +37,6 @@ module Api
       lng = params[:search][:lng].to_f
       location = [lat, lng]
       Listing.within(4, origin: location)
-
     end
 
     private

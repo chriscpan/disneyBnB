@@ -8,6 +8,7 @@
 
         </div>
         <a href="#/listings/<%= listing.get('id') %>">
+          <!-- listing.images()[0].url -->
           <%= listing.escape('title') %>
         </a>
         <p class=listing-description><%=listing.escape('address') %></p>

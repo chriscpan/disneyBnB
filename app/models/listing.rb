@@ -26,6 +26,12 @@ class Listing < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_many(
+    :images,
+    class_name: 'Image',
+    foreign_key: :listing_id,
+    primary_key: :id
+  )
   acts_as_mappable(
     default_units: :miles,
     lat_column_name: :latitude,

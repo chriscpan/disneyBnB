@@ -43,33 +43,47 @@ listing1 = Listing.create(
   capacity: 2,
   title: 'Arrendale Castle',
   address: '123 Frozen',
-  description: 'olaf!',
+  description: "It is located in a defensive position guarding the fjord that leads to Arendelle's harbor. Due to Elsa's unstable control of her powers, the castle grounds were considered off-limits to the outside world by her parents, out of concern for the kingdom's protection, along with Anna's and Elsa's as well.
+After 13 years, Anna helps Elsa finally gain control of her powers, declaring to never again close the castle gates, therefore allowing visitors into the castle.",
   owner_id: 1,
   latitude: 37.768853,
   longitude: -122.474536
 )
+  image1 = Image.create(
+    listing_id: 1,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/arrendale-castle.jpg"
+  )
 
 listing2 = Listing.create(
   price: 100,
   capacity: 2,
   title: 'Paradise Falls',
   address: '123 Sky',
-  description: 'balloons!',
+  description: 'Ever since childhood, Ellie had planned to move her clubhouse next to Paradise Falls. Carl promised to help her get there. After the two had gotten married and spent their lives together, Ellie died of old age before they could ever make their dream happen. Left with the task to make it there for Ellie, Carl travels to South America to find Paradise Falls.',
   owner_id: 2,
   latitude: 37.835043,
   longitude: -122.452049
 )
+  image2 = Image.create(
+    listing_id: 2,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/paradise-falls.jpg"
+  )
 
 listing3 = Listing.create(
   price: 200,
   capacity: 2,
   title: 'Elephant Graveyard',
   address: '123 King',
-  description: 'lions!',
+  description: 'The Elephant Graveyard is located beyond a rise that marks the northern border of the Pride Lands. It is a dry, barren, rocky wasteland, perpetually covered in fog that casts a shadow over the area, even in the daytime. Bones of dead elephants litter the landscape. The area is geothermally active, containing many natural steam vents. It was the home of the hyenas.
+The Graveyard is named after the various elephant skeletons that litter the area. It is also known for the numerous geysers that were located there. The graveyard is visible from Pride Rock as a shadowy area. It has been speculated that part of the reason the Elephant Graveyard is such a terrible place is because the hyenas live there, especially considering what they did to the Pride Lands during their residence there.',
   owner_id: 3,
   latitude: 37.7833,
   longitude: -122.4167
 )
+  image3 = Image.create(
+    listing_id: 3,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/elephant-graveyard.jpg"
+  )
 
 listing4 = Listing.create(
   price: 400,
@@ -81,6 +95,10 @@ listing4 = Listing.create(
   latitude: 37.76244,
   longitude: -122.5550
 )
+  image4 = Image.create(
+    listing_id: 4,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/atlantica.png"
+  )
 
 listing5 = Listing.create(
   price: 500,
@@ -91,7 +109,12 @@ listing5 = Listing.create(
   owner_id: 5,
   latitude: 37.799546,
   longitude: -122.451517
-),
+)
+  image5 = Image.create(
+    listing_id: 5,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/agrabah.jpg"
+  )
+
 
 listing6 = Listing.create(
   price: 50,
@@ -102,7 +125,11 @@ listing6 = Listing.create(
   owner_id: 3,
   latitude: 37.690785,
   longitude: -122.443664
-),
+)
+  image6 = Image.create(
+    listing_id: 6,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/pride-rock.jpg"
+  )
 
 listing7 = Listing.create(
   price: 150,
@@ -114,6 +141,10 @@ listing7 = Listing.create(
   latitude: 37.749512,
   longitude: -122.487180
 )
+  image7 = Image.create(
+    listing_id: 7,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/andys-room.jpg"
+  )
 
 listing8 = Listing.create(
   price: 400,
@@ -126,3 +157,7 @@ Within the tower and over the years, Rapunzel has painted a series of murals. Th
   latitude: 37.828015,
   longitude: -122.374920
 )
+  image8 = Image.create(
+    listing_id: 8,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/rapunzel-tower.png"
+  )
