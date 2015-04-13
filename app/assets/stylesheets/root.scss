@@ -1,9 +1,9 @@
-.root-text {
+.home p {
   text-align: center;
   font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: block;
   font-weight: bold;
-  margin-bottom: 50%;
+  // margin-bottom: 50%;
   color: #fff;
 }
 .welcome-home {
@@ -11,16 +11,22 @@
   font-size: 50px;
   display: block;
   height: 66px;
-  margin-bottom: 50%;
+  margin-bottom: 18%;
   line-height: 66px;
   color: #fff;
+}
+
+.welcome-home span {
+  font-size: 18px;
 }
 
 .clone-text {
   font-size: 18px;
   margin-left: 30%;
   margin-right: 30%;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
+  color: white;
+  text-align: center;
 }
 
 .home {
@@ -28,7 +34,26 @@
   // position: relative;
   width: 100%;
   min-height: 100%;
-  background: url("https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/up_house.jpg") no-repeat;
+  background: url("https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/up_house.jpg") no-repeat center center;
   // background-color: black;
+  // background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+
 }
+
+.home-search {
+  // position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+// .root-img {
+//   z-index: -1;
+// }

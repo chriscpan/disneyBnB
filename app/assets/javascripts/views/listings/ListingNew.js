@@ -1,5 +1,5 @@
 disneyBnB.Views.ListingNew = Backbone.View.extend({
-  tagName: 'div form-container',
+  tagName: 'div class=form-container',
   template: JST['listing/listingForm'],
 
   initialize: function(){
@@ -21,7 +21,7 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
 
   createListing: function(event){
     event.preventDefault();
-    var data = $(event.currentTarget).serializeJSON();
+    var data = $(this.$el.find('.listing-form')).serializeJSON();
     this.model.save(data, {
       success: function(){
         console.log('create listing!');

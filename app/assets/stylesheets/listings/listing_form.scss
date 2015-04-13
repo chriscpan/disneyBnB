@@ -1,0 +1,36 @@
+
+.listing-form {
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #eee;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.new-listing-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  color: rgb(86, 90, 92);
+  display: block;
+  font-family: Circular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.new-listing-header h3 {
+  font-size: 32px;
+  font-weight: normal;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+
+.new-listing-header p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.listing-form div {
+  margin-left: 30%;
+  margin-right: 30%;
+}
