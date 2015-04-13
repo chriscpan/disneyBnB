@@ -1,6 +1,23 @@
-class Listing < ActiveRecord::Base
+# == Schema Information
+#
+# Table name: listings
+#
+#  id          :integer          not null, primary key
+#  owner_id    :integer          not null
+#  price       :integer          not null
+#  capacity    :integer          not null
+#  title       :string           not null
+#  address     :string           not null
+#  description :text             not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#  longitude   :float            not null
+#  latitude    :float            not null
+#
 
-  validates :price, :capacity, :title, :address, :owner_id, :location, :longitude, presence: true
+class Listing < ActiveRecord::Base
+  # include Geokit::Geocoders
+  validates :price, :capacity, :title, :address, :owner_id, :longitude, presence: true
 
   belongs_to(
     :owner,
@@ -9,18 +26,11 @@ class Listing < ActiveRecord::Base
     primary_key: :id
   )
 
-  has_one(
-    :location,
-    class_name: 'Location',
-    foreign_key: :listing_id,
-    primary_key: :id
-  )
-
   acts_as_mappable(
     default_units: :miles,
-    distance: :distance,
-    lat_column_name: :lat,
-    lng_column_name: :lng
+    lat_column_name: :latitude,
+    lng_column_name: :longitude
   )
+
 
 end

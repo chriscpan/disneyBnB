@@ -24,21 +24,20 @@ module Api
     end
 
     def index
-      @listings = Listing.all
-      # @listings = search
-      # render :index
+      # @listings = Listing.all
+      if params[:search]
+        @listings = search
+      else
+        @listings = Listing.all
+      end
     end
-    # google maps search
-    # def search
-    #   debugger
-    #   @listings = filter_listings(filter_options)
-    #   render json: @listings
-    # end
 
     def search
-      # if params[:search]
-      #   fail
-      # end
+      lat = params[:search][:lat].to_f
+      lng = params[:search][:lng].to_f
+      location = [lat, lng]
+      Listing.within(4, origin: location)
+
     end
 
     private

@@ -26,15 +26,17 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     console.log('getListings!');
     var lat = event.getPlaces()[0].geometry.location.k;
     var lng = event.getPlaces()[0].geometry.location.D;
-    debugger
-    // this.collection.fetch({
-    //   data: {search: {
-    //    location
-    //   },
-    //   success: function(){
-    //     myview.collection.each( function(listing) {
-    //         });
-    //   }
-    // });
+
+    var filterData = {
+      lat: lat,
+      lng: lng
+    };
+    this.collection.fetch({
+      data: { search : filterData },
+      success: function(){
+        console.log('success!');
+        Backbone.history.navigate("listings", {trigger: true});
+      }
+    });
   }
 });
