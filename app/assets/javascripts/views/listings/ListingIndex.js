@@ -10,6 +10,7 @@ disneyBnB.Views.ListingIndex = Backbone.View.extend({
     var content = this.template({
       listings: this.collection
     });
+    
     this.$el.html(content);
     var v = new disneyBnB.Views.GoogleMaps({
       collection: this.collection

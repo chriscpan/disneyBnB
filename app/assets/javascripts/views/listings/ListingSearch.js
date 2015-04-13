@@ -2,48 +2,37 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
   template: JST['listing/listingSearch'],
 
   initialize: function(options){
-    this.input = this.$el.find('input');
     this.init_searchBar();
-  },
-
-  events: {
-    'input': 'updateCities',
-    'submit': 'getListings'
   },
 
   init_searchBar: function() {
     var content = this.template();
     this.$el.html(content);
-    searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0])
+    searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0]);
     this.attachMapListeners();
   },
 
   attachMapListeners: function(){
-    google.maps.event.addListener(searchBox, 'places_changed', this.getListings.bind(this))
+    var fn = this.getListings;
+    var that = this;
+    google.maps.event.addListener(searchBox, 'places_changed', function(){
+      fn.call(that, this);
+    });
   },
 
-  getListings: function(){
-    console.log('getListings!');
+  getListings: function(event){
 
+    console.log('getListings!');
+    var lat = event.getPlaces()[0].geometry.location.k;
+    var lng = event.getPlaces()[0].geometry.location.D;
     // this.collection.fetch({
     //   data: {search: {
     //
     //   },
     //   success: function(){
-    //     this.collection.each( function(listing) {
+    //     myview.collection.each( function(listing) {
     //         });
     //   }
     // });
-  },
-
-  updateCities: function(event){
-    // debugger
-    if (this.input.val() === "") {
-      this.render([]);
-      return ;
-    }
-    // this.render(this.input.val());
-
-    console.log('hello')
   }
 });

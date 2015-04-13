@@ -3,11 +3,17 @@
     <ul>
     <% listings.each( function(listing) { %>
       <li class='listings'>
+        <div class='listing-picture'>
+
+        </div>
         <a href="#/listings/<%= listing.get('id') %>">
           <%= listing.escape('title') %>
         </a>
+        <p class=listing-description><%=listing.escape('address') %></p>
       </li>
     <% }) %>
     </ul>
+  </div>
+  <div class="map-area">
   </div>
 </div>

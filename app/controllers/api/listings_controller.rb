@@ -27,17 +27,16 @@ module Api
       @listings = Listing.all
       render :index
     end
+    # google maps search
+    # def search
+    #   debugger
+    #   @listings = filter_listings(filter_options)
+    #   render json: @listings
+    # end
 
     def search
-      debugger
-      @listings = filter_listings(filter_options)
-      render json: @listings
+      
     end
-
-    def filter
-
-    end
-
     private
 
     def filter_options
