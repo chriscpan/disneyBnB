@@ -17,7 +17,7 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     };
 
     map = new google.maps.Map(this.el, mapOptions);
-
+    debugger
     this.collection.each(this.addMarker.bind(this));
     this.attachMapListeners();
   },
@@ -25,7 +25,7 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   attachMapListeners: function () {
     google.maps.event.addListener(map, 'bounds_changed', this.setBounds.bind(this));
     google.maps.event.addListener(searchBox, 'places_changed', this.addPin.bind(this));
-    // google.maps.event.addListener(map, 'idle', this.search.bind(this));
+    google.maps.event.addListener(map, 'idle', this.search.bind(this));
     // google.maps.event.addListener(this._map, 'click', this.createListing.bind(this));
   },
 
@@ -65,18 +65,34 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     this._markers[listing.id] = marker;
   },
 
+  // createListing: function (event) {
+  //   var listing = new GoogleMapsDemo.Models.Listing({
+  //     lat: event.latLng.lat(),
+  //     lng: event.latLng.lng()
+  //   });
+  //
+  //   listing.save({}, {
+  //     success: function () {
+  //       this.collection.add(listing);
+  //     }.bind(this)
+  //   });
+  // },
+
   search: function () {
     var mapBounds = map.getBounds();
     var ne = mapBounds.getNorthEast();
     var sw = mapBounds.getSouthWest();
-
+    debugger
     var filterData = {
       lat: [sw.lat(), ne.lat()],
       lng: [sw.lng(), ne.lng()]
     };
 
     this.collection.fetch({
-      data: { filter_data: filterData }
+      data: { filter_data: filterData },
+      success:  function() {
+        console.log('idle!');
+      }
     });
   },
   //

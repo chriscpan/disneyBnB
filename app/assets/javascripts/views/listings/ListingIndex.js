@@ -1,21 +1,21 @@
 disneyBnB.Views.ListingIndex = Backbone.View.extend({
+  tagName: 'div class=listing-container',
+
   template: JST['listing/listingIndex'],
 
   initialize: function(){
-    this.listenTo(this.collection, 'sync', this.render);
+    this.mapShow = new disneyBnB.Views.GoogleMaps({
+      collection: this.collection
+    });
+    this.searchIndex = new disneyBnB.Views.searchIndex({
+      collection: this.collection
+    });
   },
 
   render: function() {
-    var content = this.template({
-      listings: this.collection
-    });
-
-    this.$el.html(content);
-    var v = new disneyBnB.Views.GoogleMaps({
-      collection: this.collection
-    });
-    this.$('.listing-container').append(v.$el);
-    v.initMap();
+    this.$el.html(this.searchIndex.render().$el);
+    this.$el.append(this.mapShow.$el);
+    this.mapShow.initMap();
     return this;
   }
 });

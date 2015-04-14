@@ -24,11 +24,14 @@ module Api
 
     def index
       # @listings = Listing.all
-      if params[:search]
+      if params[:filter_data]
+        @listings = filter_listings(params[:filter_data])
+      elsif params[:search]
         @listings = search
       else
         @listings = Listing.includes(:images).all
       end
+      render :index
     end
 
     def search
@@ -65,13 +68,13 @@ module Api
       if binds[:lng_min].to_f > binds[:lng_max].to_f
         # Wrap around the International Date Line
         Listing.where(<<-SQL, binds)
-          listings.lng BETWEEN :lng_min AND 180
-            OR listings.lng BETWEEN -180 AND :lng_max
+          listings.longitude BETWEEN :lng_min AND 180
+            OR listings.longitude BETWEEN -180 AND :lng_max
         SQL
       else
         Listing.where(<<-SQL, binds)
-          listings.lat BETWEEN :lat_min AND :lat_max
-            AND listings.lng BETWEEN :lng_min AND :lng_max
+          listings.latitude BETWEEN :lat_min AND :lat_max
+            AND listings.longitude BETWEEN :lng_min AND :lng_max
         SQL
       end
     end

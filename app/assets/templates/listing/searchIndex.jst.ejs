@@ -1,0 +1,18 @@
+<!-- <div class="listing-index"> -->
+  <div class="filter-listings">
+  </div>
+  <ul>
+    <br>
+  <% listings.each( function(listing) { %>
+    <li class='listings'>
+      <a href="#/listings/<%= listing.get('id') %>">
+        <img class="listing-picture" src="<%= listing.attributes.images[0].image_url %>" />
+      </a>
+      <a href="#/listings/<%= listing.get('id') %>">
+        <%= listing.escape('title') %>
+      </a>
+      <p class=listing-description><%=listing.escape('address') %></p>
+    </li>
+  <% }) %>
+  </ul>
+<!-- </div> -->

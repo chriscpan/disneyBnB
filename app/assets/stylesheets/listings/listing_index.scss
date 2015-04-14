@@ -11,6 +11,17 @@
   overflow-y: scroll;
 }
 
+.listing-index ul {
+  border-top: 1px solid #ddd;
+}
+
+.filter-listings {
+  height: 200px;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
 .listing-container {
   border-top: 1px solid #ddd;
   position: relative;
