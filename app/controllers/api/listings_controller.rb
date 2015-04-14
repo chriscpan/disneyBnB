@@ -3,7 +3,6 @@ module Api
     def show
       # debugger
       @listing = Listing.includes(:images).find(params[:id])
-
       if @listing
         render :show
       else

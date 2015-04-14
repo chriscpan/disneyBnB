@@ -5,10 +5,10 @@
     <% listings.each( function(listing) { %>
       <li class='listings'>
         <div class='listing-picture'>
-
         </div>
         <a href="#/listings/<%= listing.get('id') %>">
-          <!-- listing.images()[0].url -->
+          <!-- listing.images()[0].image_url -->
+          <!-- listing.attributes.images[0].image_url -->
           <%= listing.escape('title') %>
         </a>
         <p class=listing-description><%=listing.escape('address') %></p>
@@ -17,3 +17,5 @@
     </ul>
   </div>
 </div>
+
+listing.images.get

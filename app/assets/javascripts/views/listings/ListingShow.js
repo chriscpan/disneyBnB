@@ -6,7 +6,9 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
   },
 
   render: function(){
+    // debugger
     var content = this.template({
+      picture: this.model.get('images'),
       listing: this.model
     });
     this.$el.html(content);
