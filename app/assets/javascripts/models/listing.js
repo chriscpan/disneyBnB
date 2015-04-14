@@ -13,5 +13,12 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
       this._images = new disneyBnB.Collections.Images([], {listing: this});
     }
     return this._images;
+  },
+
+  reservations: function(){
+    if (!this._reservations) {
+      this._reservations = new disneyBnB.Collections.Reservations([], {listing: this});
+    }
+    return this._reservations;
   }
 });

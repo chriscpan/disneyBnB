@@ -11,12 +11,69 @@
       <p class="price">$<%= listing.get('price') %></p>
       <p class="day">Per Night </p>
     </div>
+    <div class='reservation-form'>
+      <div class='checkout-form group'>
+        <br>
+        <br>
+        <input type="text" class="capacity-input" value="start date">
+        <input type="text" class="capacity-input" value='end date'>
+        <div class="dropdown capacity-input">
+          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Capacity
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            ...
+          </ul>
+        </div>
+      </div>
+
+      <div class='fee-row group'>
+        <div class='fee-description'>
+          <p><%=listing.get('price') %> x 9 Nights </p>
+        </div>
+        <div class='fee-price'>
+          <p>$<%=listing.get('price') * 9 %>
+        </div>
+      </div>
+
+      <div class='fee-row group'>
+        <div class='fee-description'>
+          <p>Cleaning fee</p>
+        </div>
+        <div class='fee-price'>
+          <p>$70</p>
+        </div>
+      </div>
+
+      <div class='fee-row group'>
+        <div class='fee-description'>
+          <p>Service fee</p>
+        </div>
+        <div class='fee-price'>
+          <p>$84</p>
+        </div>
+      </div>
+
+      <div class='fee-row group'>
+        <div class='fee-description'>
+          <p>Total</p>
+        </div>
+        <div class='fee-price'>
+          <p>$<%= listing.get('price') * 9 + 84 + 70 %></p>
+        </div>
+      </div>
+
+      <div class='instant-book-btn'>
+        <!-- <input type="submit" value="Instant Book"> -->
+        <button type="button" class="btn btn-primary">Instant Book</button>
+      </div>
+
+    </div>
     <br>
     <br>
   </div>
 
-  <!-- <p class="capacity"><%= listing.get('capacity') %></p>
-  <br> -->
   <div class=details>
     <div class=about-listing>
       <h3> About This Listing </h3>

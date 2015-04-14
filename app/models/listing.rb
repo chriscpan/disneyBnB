@@ -32,6 +32,14 @@ class Listing < ActiveRecord::Base
     foreign_key: :listing_id,
     primary_key: :id
   )
+
+  has_many(
+    :reservations,
+    class_name: 'Reservation',
+    foreign_key: :listing_id,
+    primary_key: :id
+  )
+  
   acts_as_mappable(
     default_units: :miles,
     lat_column_name: :latitude,

@@ -28,6 +28,13 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_many(
+    :reservations,
+    class_name: 'Reservation',
+    foreign_key: :user_id,
+    primary_key: :id
+  )
+
   def self.generate_session_token
     begin
       token = SecureRandom.urlsafe_base64
