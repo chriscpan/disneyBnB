@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.destroy_all
 Listing.destroy_all
+Image.destroy_all
 
 user1 = User.create(
   username: 'Elsa',

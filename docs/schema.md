@@ -21,7 +21,11 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 reserver_id | integer   | not null, foreign key (references users)
-reserved?   | boolean   | default: pending ???
+listing_id  | integer   | not null, foreign key (references listings)
+start_date  | date      | not null
+end_date    | date      | not null
+status      | string    | default: pending ???
+capacity    | integer   | not null
 
 ## requests
 column name | data type | details
