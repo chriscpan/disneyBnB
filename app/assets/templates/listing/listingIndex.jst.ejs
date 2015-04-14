@@ -4,8 +4,9 @@
       <br>
     <% listings.each( function(listing) { %>
       <li class='listings'>
-        <div class='listing-picture'>
-        </div>
+        <a href="#/listings/<%= listing.get('id') %>">
+          <img class="listing-picture" src="<%= listing.attributes.images[0].image_url %>" />
+        <!-- </a> -->
         <a href="#/listings/<%= listing.get('id') %>">
           <!-- listing.images()[0].image_url -->
           <!-- listing.attributes.images[0].image_url -->
@@ -17,5 +18,3 @@
     </ul>
   </div>
 </div>
-
-<!-- listing.images.get -->
