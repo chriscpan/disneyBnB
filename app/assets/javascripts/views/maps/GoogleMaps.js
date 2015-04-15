@@ -11,11 +11,20 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
 
   // longitude: D, Latitude: k
   initMap: function () {
+    var lat = 37.7833;
+    var lng = -122.4167;
+    // debugger
+    if (disneyBnB.GLOBAL_LATITUDE){
+      lat = disneyBnB.GLOBAL_LATITUDE;
+      lng = disneyBnB.GLOBAL_LONGITUDE;
+    }
     var mapOptions = {
-      center: { lat: 37.7833, lng: -122.4167},
+      center: { lat: lat, lng: lng},
       zoom: 12
     };
-
+    disneyBnB.GLOBAL_LONGITUDE = null;
+    disneyBnB.GLOBAL_LATITUDE = null;
+    // debugger
     map = new google.maps.Map(this.el, mapOptions);
     this.collection.each(this.addMarker.bind(this));
     this.attachMapListeners();
