@@ -25,10 +25,8 @@
       </div>
     </form>
       <ul class="nav navbar-nav navbar-right">
-        <li> <%= link_to current_user.username, user_url(current_user), method: :get %> </li>
-        <li>  <%= link_to "Log Out", session_url, method: :delete %></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <%= current_user.username %> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#/listings">Listings</a></li>
             <li><a href="#/listings/new">Make Your Own Listing</a></li>
@@ -37,6 +35,7 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
+        <li>  <%= link_to "Log Out", session_url, method: :delete %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
