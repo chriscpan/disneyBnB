@@ -63,3 +63,20 @@
 .input-group {
   float: left;
 }
+
+.input-group:first-child {
+  input {
+    width: 200px;
+  }
+}
+
+.input-group input {
+  width: 100px;
+  height: 30px;
+}
+
+.root-submit input {
+  height: 30px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}

@@ -13,7 +13,9 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
   },
 
   root: function(){
-    var v = new disneyBnB.Views.Root();
+    var v = new disneyBnB.Views.Root({
+      listings: this.collection
+    });
     this._swapView(v);
   },
 

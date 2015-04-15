@@ -18,7 +18,6 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     google.maps.event.addListener(searchBox, 'places_changed', function(){
       fn.call(that, this);
     });
-    // google.maps.event.addListener(searchBox, 'places_changed', this.getListings.bind(this));
   },
 
   getListings: function(event){
