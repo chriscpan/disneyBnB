@@ -2,7 +2,7 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
   template: JST['listing/listingSearch'],
 
   initialize: function(options){
-    this.$el.find('input')
+    this.$el.find('input');
     this.init_searchBar();
   },
 

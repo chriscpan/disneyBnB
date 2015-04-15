@@ -119,7 +119,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     }
 
     var places = searchBox.getPlaces();
-    console.log(places);
     if (places.length === 0) {
       return;
     }
@@ -142,7 +141,9 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     });
 
     this._markers[0] = marker;
-    bounds.extend(place.geometry.location);
-    map.fitBounds(bounds);
+    // bounds.extend(place.geometry.location);
+    // map.fitBounds(bounds);
+    map.setCenter(place.geometry.location);
+    map.setZoom(12);
   }
 });

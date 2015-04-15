@@ -16,6 +16,9 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
       listing: this.model
     });
     this.$el.html(content);
+
+    disneyBnB.findDatePicker();
+
     return this;
   },
 

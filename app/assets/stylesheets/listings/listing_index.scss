@@ -1,11 +1,11 @@
 #map-canvas {
-  height: 700px;
+  height: 100%;
   width: 40%;
   right: 0;
 }
 
 .listing-index {
-  height: 700px;
+  height: 100%;
   width: 60%;
   float: left;
   overflow-y: scroll;
@@ -27,6 +27,7 @@
   position: relative;
   background-color: #eee;
   width: 100%;
+  height: calc(100vh - 50px);
 }
 
 .listings {
@@ -45,7 +46,9 @@
   width: 100%;
   display: block;
   background-color: #006699;
+  overflow: hidden;
 }
+
 .listings a {
   display: block;
   font-size: 16px;

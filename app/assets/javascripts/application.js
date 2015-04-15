@@ -11,11 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/datepicker
 //= require jquery_ujs
+//= require jquery.serializejson.min
 //= require bootstrap
 //= require underscore
 //= require backbone
-//= require jquery.serializejson.min
 //= require disneybnb
 //= require_tree ../templates
 //= require_tree ./models

@@ -4,6 +4,7 @@ window.disneyBnB = {
   Views: {},
   Routers: {},
   initialize: function() {
+
     var user = new disneyBnB.Models.User();
     // user = user.fetch({url: '../api/users'});
     var $rootEl = $('#main');
@@ -19,7 +20,13 @@ window.disneyBnB = {
       user: user,
       listings: listings
     });
+
     Backbone.history.start();
+  },
+
+  findDatePicker: function(){
+    $('#check-in').datepicker();
+    $('#check-out').datepicker();
   }
 };
 

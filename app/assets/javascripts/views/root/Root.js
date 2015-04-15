@@ -8,6 +8,7 @@ disneyBnB.Views.Root = Backbone.View.extend({
   render: function(){
     var content = this.template();
     this.$el.html(content);
+    disneyBnB.findDatePicker();
     return this;
   },
 });
