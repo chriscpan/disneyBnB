@@ -17,7 +17,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     };
 
     map = new google.maps.Map(this.el, mapOptions);
-    debugger
     this.collection.each(this.addMarker.bind(this));
     this.attachMapListeners();
   },
@@ -82,7 +81,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     var mapBounds = map.getBounds();
     var ne = mapBounds.getNorthEast();
     var sw = mapBounds.getSouthWest();
-    debugger
     var filterData = {
       lat: [sw.lat(), ne.lat()],
       lng: [sw.lng(), ne.lng()]
@@ -122,7 +120,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
 
     var places = searchBox.getPlaces();
     console.log(places);
-    // debugger
     if (places.length === 0) {
       return;
     }

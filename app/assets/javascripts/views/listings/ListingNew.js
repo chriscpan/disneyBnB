@@ -11,7 +11,6 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
   },
 
   render: function() {
-    // debugger
     var content = this.template({
       listing: this.model
     });
@@ -31,7 +30,6 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       error: function(model, response){
         console.log('error!');
         var $ul = $('<ul> </ul>');
-          debugger
         // $(response.responseJSON).each(function(index, message){
         //   var $li = $('<li>' + message + '</li>');
         //   $ul.append($li);

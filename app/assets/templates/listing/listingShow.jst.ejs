@@ -11,12 +11,12 @@
       <p class="price">$<%= listing.get('price') %></p>
       <p class="day">Per Night </p>
     </div>
-    <div class='reservation-form'>
+    <form class='reservation-form'>
       <div class='checkout-form group'>
         <br>
         <br>
-        <input type="text" class="capacity-input" value="start date">
-        <input type="text" class="capacity-input" value='end date'>
+        <input type="text" class="capacity-input" name=input1 placeholder="Start Date">
+        <input type="text" class="capacity-input" name=input2 placeholder='End Date'>
         <div class="dropdown capacity-input">
           <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Capacity
@@ -66,13 +66,13 @@
 
       <div class='instant-book-btn'>
         <!-- <input type="submit" value="Instant Book"> -->
-        <button type="button" class="btn btn-primary">Instant Book</button>
+        <button type="button" class="btn btn-primary book-listing">Instant Book</button>
       </div>
 
     </div>
     <br>
     <br>
-  </div>
+  </form>
 
   <div class=details>
     <div class=about-listing>

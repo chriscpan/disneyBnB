@@ -5,8 +5,11 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
     this.listenTo(this.model, 'sync', this.render);
   },
 
+  events: {
+    'click .book-listing': 'reserveListing'
+  },
+
   render: function(){
-    // debugger
     var content = this.template({
       reservation: this.model.get('reservations'),
       picture: this.model.get('images'),
@@ -14,5 +17,20 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
     });
     this.$el.html(content);
     return this;
+  },
+
+  reserveListing: function(event) {
+    event.preventDefault();
+    var data = this.$el.find('form').serializeJSON();
+    var reservation = new disneyBnB.Models.Reservation();
+    reservation.save( data, {
+      success: function() {
+        this.collection.reservations().add(reservation, {merge: true});
+        conosle.log('success!');
+      }.bind(this),
+      error: function() {
+        console.log('error!');
+      }.bind(this)
+    });
   }
 });

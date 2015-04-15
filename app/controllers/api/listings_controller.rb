@@ -1,7 +1,6 @@
 module Api
   class ListingsController < ApiController
     def show
-      # debugger
       @listing = Listing.includes(:images, :reservations).find(params[:id])
       if @listing
         render :show
