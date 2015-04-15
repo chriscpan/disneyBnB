@@ -2,7 +2,6 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
   template: JST['listing/listingSearch'],
 
   initialize: function(options){
-    this.$el.find('input');
     this.init_searchBar();
   },
 
@@ -19,11 +18,10 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     google.maps.event.addListener(searchBox, 'places_changed', function(){
       fn.call(that, this);
     });
+    // google.maps.event.addListener(searchBox, 'places_changed', this.getListings.bind(this));
   },
 
   getListings: function(event){
-
-    console.log('getListings!');
     var lat = event.getPlaces()[0].geometry.location.k;
     var lng = event.getPlaces()[0].geometry.location.D;
 
@@ -34,7 +32,6 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     this.collection.fetch({
       data: { search : filterData },
       success: function(){
-        console.log('success!');
         Backbone.history.navigate("listings", {trigger: true});
       }
     });

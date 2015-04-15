@@ -5,7 +5,7 @@
     <br>
   <% listings.each( function(listing) { %>
     <li class='listings'>
-      <a href="#/listings/<%= listing.get('id') %>">
+      <a class='picture-container' href="#/listings/<%= listing.get('id') %>">
         <img class="listing-picture" src="<%= listing.attributes.images[0].image_url %>" />
       </a>
       <a href="#/listings/<%= listing.get('id') %>">
