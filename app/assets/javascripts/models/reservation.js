@@ -1,4 +1,4 @@
 disneyBnB.Models.Reservation = Backbone.Model.extend({
-  urlRoot: '/api/listings',
-  
+  urlRoot: '/api/reservations',
+
 })

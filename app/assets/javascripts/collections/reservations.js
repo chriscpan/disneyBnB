@@ -1,4 +1,4 @@
 disneyBnB.Collections.Reservations = Backbone.Collection.extend({
-  url: '/api/listings',
+  url: '/api/reservations',
   model: 'disneyBnB.Models.Reservation'
 });

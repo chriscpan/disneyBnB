@@ -16,7 +16,6 @@
 #
 
 class Listing < ActiveRecord::Base
-  # include Geokit::Geocoders
   validates :price, :capacity, :title, :address, :owner_id, :longitude, presence: true
 
   belongs_to(
@@ -39,7 +38,7 @@ class Listing < ActiveRecord::Base
     foreign_key: :listing_id,
     primary_key: :id
   )
-  
+
   acts_as_mappable(
     default_units: :miles,
     lat_column_name: :latitude,

@@ -22,7 +22,6 @@ module Api
     end
 
     def index
-      # @listings = Listing.all
       if params[:filter_data]
         @listings = filter_listings(params[:filter_data])
       elsif params[:search]
