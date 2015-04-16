@@ -13,7 +13,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   initMap: function () {
     var lat = 37.7833;
     var lng = -122.4167;
-    // debugger
     if (disneyBnB.GLOBAL_LATITUDE){
       lat = disneyBnB.GLOBAL_LATITUDE;
       lng = disneyBnB.GLOBAL_LONGITUDE;
@@ -24,7 +23,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     };
     disneyBnB.GLOBAL_LONGITUDE = null;
     disneyBnB.GLOBAL_LATITUDE = null;
-    // debugger
     map = new google.maps.Map(this.el, mapOptions);
     this.collection.each(this.addMarker.bind(this));
     this.attachMapListeners();
@@ -87,6 +85,7 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   // },
 
   search: function () {
+    console.log('idle!')
     var mapBounds = map.getBounds();
     var ne = mapBounds.getNorthEast();
     var sw = mapBounds.getSouthWest();
@@ -97,9 +96,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
 
     this.collection.fetch({
       data: { filter_data: filterData },
-      success:  function() {
-        console.log('idle!');
-      }
     });
   },
   //
@@ -114,12 +110,16 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   // },
 
   setBounds: function() {
-    console.log('change bounds');
     var bounds = map.getBounds();
     searchBox.setBounds(bounds);
   },
 
   addPin: function() {
+    // var places = searchBoxHome.getPlaces();
+    // var place = places[0];
+    // disneyBnB.GLOBAL_LATITUDE = place.geometry.location.k;
+    // disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.D;
+    // Backbone.history.navigate('/listings', {trigger:true});
 
     var marker = this._markers[0];
     if (marker) {

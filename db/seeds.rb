@@ -50,9 +50,17 @@ After 13 years, Anna helps Elsa finally gain control of her powers, declaring to
   latitude: 37.768853,
   longitude: -122.474536
 )
-  image1 = Image.create(
+  image101 = Image.create(
     listing_id: 1,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/arrendale-castle.jpg"
+  )
+  image102 = Image.create(
+    listing_id: 1,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/arrendale-room-1.jpg"
+  )
+  image103 = Image.create(
+    listing_id: 1,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/arrendales-room-2.jpg"
   )
 
 listing2 = Listing.create(
@@ -65,9 +73,17 @@ listing2 = Listing.create(
   latitude: 37.835043,
   longitude: -122.452049
 )
-  image2 = Image.create(
+  image201 = Image.create(
     listing_id: 2,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/paradise-falls.jpg"
+  )
+  image202 = Image.create(
+    listing_id: 2,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/paradise-falls-room-1.jpg"
+  )
+  image203 = Image.create(
+    listing_id: 2,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/paradise-falls-room-2.jpg"
   )
 
 listing3 = Listing.create(
@@ -81,9 +97,17 @@ The Graveyard is named after the various elephant skeletons that litter the area
   latitude: 37.7833,
   longitude: -122.4167
 )
-  image3 = Image.create(
+  image301 = Image.create(
     listing_id: 3,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/elephant-graveyard.jpg"
+  )
+  image302 = Image.create(
+    listing_id: 3,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/elephant-graveyard-room-1.png"
+  )
+  image303 = Image.create(
+    listing_id: 3,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/elephant-graveyard-room-2.jpg"
   )
 
 listing4 = Listing.create(
@@ -96,9 +120,17 @@ listing4 = Listing.create(
   latitude: 37.76244,
   longitude: -122.5550
 )
-  image4 = Image.create(
+  image401 = Image.create(
     listing_id: 4,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/atlantica.png"
+  )
+  image402 = Image.create(
+    listing_id: 4,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/atlantica-room-1.jpg"
+  )
+  image403 = Image.create(
+    listing_id: 4,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/atlantica-room-2.jpg"
   )
 
 listing5 = Listing.create(
@@ -111,9 +143,17 @@ listing5 = Listing.create(
   latitude: 37.799546,
   longitude: -122.451517
 )
-  image5 = Image.create(
+  image501 = Image.create(
     listing_id: 5,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/agrabah.jpg"
+  )
+  image502 = Image.create(
+    listing_id: 5,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/agrabah-room-1.png"
+  )
+  image503 = Image.create(
+    listing_id: 5,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/agrabah-room-2.png"
   )
 
 
@@ -127,9 +167,17 @@ listing6 = Listing.create(
   latitude: 37.690785,
   longitude: -122.443664
 )
-  image6 = Image.create(
+  image601 = Image.create(
     listing_id: 6,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/pride-rock.jpg"
+  )
+  image602 = Image.create(
+    listing_id: 6,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/pride-rock-room-1.jpg"
+  )
+  image603 = Image.create(
+    listing_id: 6,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/pride-rock-room-2.jpg"
   )
 
 listing7 = Listing.create(
@@ -142,9 +190,17 @@ listing7 = Listing.create(
   latitude: 37.749512,
   longitude: -122.487180
 )
-  image7 = Image.create(
+  image701 = Image.create(
     listing_id: 7,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/andys-room.jpg"
+  )
+  image702 = Image.create(
+    listing_id: 7,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/andys-room-1.jpg"
+  )
+  image703 = Image.create(
+    listing_id: 7,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/andys-room-2.jpg"
   )
 
 listing8 = Listing.create(
@@ -158,7 +214,15 @@ Within the tower and over the years, Rapunzel has painted a series of murals. Th
   latitude: 37.828015,
   longitude: -122.374920
 )
-  image8 = Image.create(
+  image801 = Image.create(
     listing_id: 8,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/rapunzel-tower.png"
+  )
+  image802 = Image.create(
+    listing_id: 8,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/rapunzels-room-1.jpg"
+  )
+  image803 = Image.create(
+    listing_id: 8,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/rapunzels-room-2.jpg"
   )

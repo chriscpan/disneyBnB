@@ -82,12 +82,16 @@
       <p class="description"><%= listing.get('description') %></p>
     </div>
     <div class='image-container group'>
-      <div class='image-one'>
-        <p> image 1</p>
-      </div>
-      <div class='image-two'>
-        <p> image 2 </p>
-      </div>
+      <!-- <div class='image-one'> -->
+        <% if (picture) { %>
+          <div class='image-one' style="background-image: url(<%= picture[1].image_url%>)"/>
+        <% } %>
+      <!-- </div> -->
+      <!-- <div class='image-two'> -->
+        <% if (picture) { %>
+          <img class='image-two' style="background-image: url(<%= picture[2].image_url%>)"/>
+        <% } %>
+      <!-- </div> -->
     </div>
   </div>
   <br>

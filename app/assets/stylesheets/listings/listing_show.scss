@@ -185,9 +185,11 @@
   height: 282px;
   width: 50% - 0.5;
   float: left;
-  outline: 1px solid black;
+  // outline: 1px solid black;
   display: block;
-  background-color: #8989FF;
+  background-size: cover;
+  background-position: center;
+  // background-color: #8989FF;
 }
 
 .image-two {
@@ -195,8 +197,10 @@
   height: 282px;
   width: 50% - 0.5;
   float: right;
-  outline: 1px solid black;
-  background-color: #8989FF;
+  // outline: 1px solid black;
+  background-size: cover;
+  background-position: center;
+  // background-color: #8989FF;
 }
 
 .group:after {

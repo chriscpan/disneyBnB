@@ -4,25 +4,31 @@
 
 <div class="modal fade bs-example-modal-sm1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
-    <div class="modal-content">
+    <div class="modal-content signup-modal">
       <h4> Sign Up </h4>
-
       <form action=<%=users_url%> method="post">
         <%= auth_token_input %>
         <label> Username
-          <input type="text" name="user[username]" value="Olaf">
+          <input type="text" name="user[username]" value="">
         </label>
         <br>
         <label>Password
-          <input type="password" name="user[password]" value="password">
+          <input type="password" name="user[password]" value="">
         </label>
         <br>
         <label>Email Address
-          <input type="text" name="user[email]" value="Olaf@Arrendale">
+          <input type="text" name="user[email]" value="">
         </label>
-        <input type="submit" value="Sign Up">
+        <input class='session-button' type="submit" value="Sign Up">
       </form>
 
+      <form action=<%=session_url%> method="post">
+        <%= auth_token_input %>
+          <input type="hidden" name="user[username]" value="Elsa">
+          <input type="hidden" name="user[password]" value="password">
+          <p class='welcome-statements'>Or sign in as Elsa!</p>
+        <input class='session-button guest-button' type="submit" value="Guest Login">
+      </form>
     </div>
   </div>
 </div>
