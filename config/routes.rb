@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :listings, only: [:show, :index, :new, :create]
     # get 'listings/search' => 'listings#search'
     resources :users, only: [:show]
+    resources :current_users, only: [:index]
     resources :reservations, only: [:create]
   end
 end

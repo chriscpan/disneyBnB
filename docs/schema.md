@@ -65,7 +65,5 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 author_id       | integer   | not null, foreign key (references user)
-profile_id      | string    | not null, foreign key (references user)
 listing_id      | string    | not null, foreign key (references listing)
 content         | string    | not null
-rating          | integer   | not null

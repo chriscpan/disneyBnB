@@ -10,7 +10,7 @@ disneyBnB.Models.User = Backbone.Model.extend({
 
   reservations: function(){
     if(!this._reservations){
-      this._reservations = new disneyBnB.Collections.Listing([], {user: this});
+      this._reservations = new disneyBnB.Collections.Listings([], {user: this});
     }
     return this._reservations;
   },
