@@ -7,3 +7,7 @@ end
 json.reservations @listing.reservations do |reservation|
   json.extract! reservation, :user_id, :listing_id, :capacity, :start_date, :end_date, :status
 end
+
+json.comments @listing.comments do |comment|
+  json.extract! comment, :user_id, :listing_id, :content
+end

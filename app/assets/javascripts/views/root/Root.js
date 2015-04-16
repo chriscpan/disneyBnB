@@ -3,7 +3,6 @@ disneyBnB.Views.Root = Backbone.View.extend({
 
   initialize: function(options){
     this.listings = options.listings;
-    // debugger
   },
 
 
@@ -11,7 +10,6 @@ disneyBnB.Views.Root = Backbone.View.extend({
     var content = this.template();
     this.$el.html(content);
     disneyBnB.findDatePicker();
-    debugger
     this.homeSearch = new disneyBnB.Views.ListingSearch({
       el: $('.listing-search'),
       collection: this.listings
@@ -22,7 +20,6 @@ disneyBnB.Views.Root = Backbone.View.extend({
   },
 
   addPin: function() {
-    // debugger
     var places = searchBoxHome.getPlaces();
     var place = places[0];
     disneyBnB.GLOBAL_LATITUDE = place.geometry.location.k;
