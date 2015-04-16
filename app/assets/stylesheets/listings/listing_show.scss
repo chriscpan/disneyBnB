@@ -184,6 +184,7 @@
 .image-one {
   height: 282px;
   width: 50% - 0.5;
+  // min-width: 280px;
   float: left;
   // outline: 1px solid black;
   display: block;
@@ -193,6 +194,7 @@
 }
 
 .image-two {
+  // min-width: 280px;
   display: block;
   height: 282px;
   width: 50% - 0.5;

@@ -8,10 +8,27 @@
   height: 260px;
 }
 
+.login-modal {
+  height: 170px;
+}
+
 .session-button {
   color: black;
   background-color: rgb(255, 90, 95);
   border: none;
   border-radius: 5px;
   color: white;
+  padding: 5px;
+}
+
+.session-button.guest-button {
+  background-color: #008A8A
+}
+
+.welcome-statements {
+  line-height: 40px;
+  margin: 0 0 0px;
+  font-weight: bold;
+  color: #00CFCF;
+  font-size: 16px;
 }

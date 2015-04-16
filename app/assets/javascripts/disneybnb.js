@@ -6,7 +6,7 @@ window.disneyBnB = {
   initialize: function() {
 
     var user = new disneyBnB.Models.User();
-    // user = user.fetch({url: '../api/users'});
+    // current_user = user.fetch({url: '../api/users'});
     var $rootEl = $('#main');
     var listings = new disneyBnB.Collections.Listings();
     this.navView = new disneyBnB.Views.ListingSearch({

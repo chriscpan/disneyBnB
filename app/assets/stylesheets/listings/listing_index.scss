@@ -13,6 +13,7 @@
 
 .listing-index ul {
   border-top: 1px solid #ddd;
+  // min-width: 258px;
 }
 
 .filter-listings {
@@ -31,6 +32,7 @@
 }
 
 .listings {
+  min-width: 214px;
   position: relative;
   float: left;
   width: 47%;

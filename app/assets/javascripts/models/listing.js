@@ -20,5 +20,14 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
       this._reservations = new disneyBnB.Collections.Reservations([], {listing: this});
     }
     return this._reservations;
-  }
+  },
+
+  // parse: function(jsonResp) {
+  //   debugger
+  //   if (jsonResp.images) {
+  //     this.images().set(jsonResp.images, {parse: true});
+  //     delete jsonResp.images;
+  //   }
+  //   return jsonResp;
+  // }
 });

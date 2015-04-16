@@ -11,12 +11,13 @@ disneyBnB.Views.Root = Backbone.View.extend({
     var content = this.template();
     this.$el.html(content);
     disneyBnB.findDatePicker();
+    debugger
     this.homeSearch = new disneyBnB.Views.ListingSearch({
-      el: $('.listing-search-home'),
+      el: $('.listing-search'),
       collection: this.listings
     });
 
-    // google.maps.event.addListener(searchBoxHome, 'places_changed', this.addPin.bind(this));
+    google.maps.event.addListener(searchBox, 'places_changed', this.addPin.bind(this));
     return this;
   },
 

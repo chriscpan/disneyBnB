@@ -17,8 +17,13 @@ disneyBnB.Models.User = Backbone.Model.extend({
 
   parse: function(jsonResp) {
     if (jsonResp.listings){
-      this.listings().set(jsonResp.listings);
+      this.listings().set(jsonResp.listings, {parse: true});
       delete jsonResp.listings;
+    }
+
+    if (jsonResp.reservations) {
+      this.reservations().set(jsonResp.reservations, {parse: true});
+      delete jsonResp.reservations;
     }
     return jsonResp;
   },
