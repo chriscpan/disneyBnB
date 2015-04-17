@@ -10,11 +10,17 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
       model: this.listing,
       listings: this.listings
     });
+    this.showComments = new disneyBnB.Views.ListingComments({
+      listing: this.listing,
+      listings: this.listings
+    });
   },
 
   render: function() {
     this.$el.html(this.showDescription.render().$el);
-    var $commentSection = this.$el.find('.panel');
+    // var $commentSection = this.$el.find('.panel');
+    // $commentSection.html(this.showComments.render().$el);
+    this.$el.append(this.showComments.render().$el);
     return this;
   }
 });

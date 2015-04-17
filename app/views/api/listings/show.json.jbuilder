@@ -9,5 +9,5 @@ json.reservations @listing.reservations do |reservation|
 end
 
 json.comments @listing.comments do |comment|
-  json.extract! comment, :user_id, :listing_id, :content
+  json.extract! comment, :author_id, :listing_id, :content
 end

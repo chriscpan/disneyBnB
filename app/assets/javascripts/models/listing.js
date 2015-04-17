@@ -20,7 +20,7 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
       this._comments = new disneyBnB.Collections.Comments([], {listing: this});
     }
     return this._comments;
-  }
+  },
 
   // parse: function(jsonResp) {
   //   debugger
@@ -30,4 +30,12 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
   //   }
   //   return jsonResp;
   // }
+
+  parse: function(jsonResp) {
+    if (jsonResp.comments) {
+      this.comments().set(jsonResp.comments, {parse: true});
+      delete jsonResp.comments;
+    }
+    return jsonResp;
+  }
 });

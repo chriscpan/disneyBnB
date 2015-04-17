@@ -1,3 +1,3 @@
-disneyBnB.Models.Comment = Backbone.Collection.extend({
+disneyBnB.Models.Comment = Backbone.Model.extend({
   urlRoot: "/api/comments"
 });

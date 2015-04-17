@@ -2,7 +2,6 @@ disneyBnB.Views.ListingDescription = Backbone.View.extend({
   template: JST['listing/listingDescription'],
 
   initialize: function(options){
-    // debugger
     this.listenTo(this.model, 'sync', this.render);
   },
 
@@ -29,7 +28,7 @@ disneyBnB.Views.ListingDescription = Backbone.View.extend({
     var reservation = new disneyBnB.Models.Reservation();
     var current_id = this.model.get('id');
     var capacity = 2;
-    var user_id = 1;
+    var user_id = disneyBnB.current_user.id;
     var status = "PENDING";
     reservation.set({
       user_id: user_id,
@@ -39,12 +38,9 @@ disneyBnB.Views.ListingDescription = Backbone.View.extend({
     });
     data.start_date = this.convertDate(data.start_date);
     data.end_date = this.convertDate(data.end_date);
-    debugger
     reservation.save( data, {
       success: function() {
-        debugger
         this.model.reservations().add(reservation);
-        console.log('success!');
       }.bind(this),
       error: function() {
         console.log('error!');
