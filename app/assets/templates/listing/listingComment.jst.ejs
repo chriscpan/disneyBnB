@@ -10,15 +10,17 @@
       </div> -->
       <div class="actionBox">
           <ul class="commentList">
-            <% listing.comments().each(function(comment) { %>
-              <li class='comment-item'>
-                <div class="commenterImage">
-                  <img src="http://cellar.org/2010/smile.jpg" />
-                </div>
-                <div class="commentText">
-                    <p class=""> <%= comment.get('content') %> </p> <span class="date sub-text">By Username</span>
-                </div>
-              </li>
+              <% listing.comments().each(function(comment) { %>
+                <% if (comment.user()) {  %>
+                <li class='comment-item'>
+                  <div class="commenterImage">
+                    <img src="<%= comment.user().get('picture_url') %>" />
+                  </div>
+                  <div class="commentText">
+                      <p class=""> <%= comment.get('content') %> </p> <span class="date sub-text">By <%= comment.user().get('username') %></span>
+                  </div>
+                </li>
+              <% } %>
             <% }) %>
           </ul>
           <form class="form-inline comment-form" role="form">

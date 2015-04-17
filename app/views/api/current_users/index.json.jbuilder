@@ -9,7 +9,7 @@
 # end
 #
 
-json.extract! @user, :id, :username, :email
+json.extract! @user, :id, :username, :email, :picture_url
 
 json.listings @user.listings do |listing|
   json.extract! listing, :owner_id, :price, :capacity, :title, :address, :description

@@ -24,6 +24,7 @@ disneyBnB.Views.ListingComments = Backbone.View.extend({
   createComment: function(event) {
     event.preventDefault();
     var comment = new disneyBnB.Models.Comment();
+    comment.user().set(disneyBnB.current_user.attributes);
     var data = $('.comment-form').serializeJSON();
     var user_id = disneyBnB.current_user.id;
     var listing_id = this.listing.id;
@@ -32,7 +33,7 @@ disneyBnB.Views.ListingComments = Backbone.View.extend({
       listing_id: listing_id
     });
     comment.save( data, {
-      success: function() {
+      success: function(comment, response) {
         console.log('success!');
         this.listing.comments().add(comment);
       }.bind(this),
