@@ -12,29 +12,29 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     this.createSearchBox();
   },
 
-  createSearchBoxHome: function(){
-    if (window.location.hash === ""){
-      searchBoxHome = new google.maps.places.SearchBox(this.$el.find('input')[0]);
-    }
-  },
+  // createSearchBoxHome: function(){
+  //   if (window.location.hash === ""){
+  //     disneyBnB.searchBoxHome = new google.maps.places.SearchBox(this.$el.find('input')[0]);
+  //   }
+  // },
 
   createSearchBox: function() {
-    searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0]);
+    disneyBnB.searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0]);
     this.attachMapListeners();
   },
 
   attachMapListeners: function(){
-    var fn = this.getListings;
-    var that = this;
-    google.maps.event.addListener(searchBox, 'places_changed', function(){
-      fn.call(that, this);
-    });
+    // var fn = this.getListings;
+    // var that = this;
+    // google.maps.event.addListener(searchBox, 'places_changed', function(){
+    //   fn.call(that, this);
+    // });
+    google.maps.event.addListener(disneyBnB.searchBox, 'places_changed', this.getListings.bind(this));
   },
 
   getListings: function(event){
-    var lat = event.getPlaces()[0].geometry.location.k;
-    var lng = event.getPlaces()[0].geometry.location.D;
-
+    var lat = disneyBnB.searchBox.getPlaces()[0].geometry.location.k;
+    var lng = disneyBnB.searchBox.getPlaces()[0].geometry.location.D;
     var filterData = {
       lat: lat,
       lng: lng

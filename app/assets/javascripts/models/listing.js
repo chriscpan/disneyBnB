@@ -30,7 +30,6 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
   },
 
   // parse: function(jsonResp) {
-  //   debugger
   //   if (jsonResp.images) {
   //     this.images().set(jsonResp.images, {parse: true});
   //     delete jsonResp.images;

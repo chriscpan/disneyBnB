@@ -38,6 +38,13 @@ disneyBnB.Views.ListingComments = Backbone.View.extend({
         this.listing.comments().add(comment);
       }.bind(this),
       error: function() {
+        var $p;
+        if (disneyBnB.current_user.id) {
+          $p = $('<p>Comment cannot be blank!</p>');
+        } else {
+          $p = $('<p>You need to be logged in</p>');
+        }
+        $('.comment-error-message').html($p);
         console.log('error!');
       }
     });

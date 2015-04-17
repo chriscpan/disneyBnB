@@ -38,12 +38,16 @@ disneyBnB.Views.ListingDescription = Backbone.View.extend({
     });
     data.start_date = this.convertDate(data.start_date);
     data.end_date = this.convertDate(data.end_date);
-    debugger
     reservation.save( data, {
       success: function() {
         this.model.reservations().add(reservation);
+        $p = $('<p>Reservation Complete! Enjoy!</p>');
+        $('.reserve-message').html($p);
+
       }.bind(this),
       error: function() {
+        $p = $('<p>Invalid Reservation, please try again</p>');
+        $('.reserve-message').html($p);
         console.log('error!');
       }.bind(this)
     });

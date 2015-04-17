@@ -11,20 +11,18 @@ disneyBnB.Views.Root = Backbone.View.extend({
     this.$el.html(content);
     disneyBnB.findDatePicker();
     this.homeSearch = new disneyBnB.Views.ListingSearch({
-      el: $('.listing-search'),
+      el: $('.listing-search-home'),
       collection: this.listings
     });
-
-    google.maps.event.addListener(searchBox, 'places_changed', this.addPin.bind(this));
+    google.maps.event.addListener(disneyBnB.searchBox, 'places_changed', this.searchFromHome.bind(this));
     return this;
   },
 
-  addPin: function() {
-    var places = searchBoxHome.getPlaces();
+  searchFromHome: function() {
+    var places = disneyBnB.searchBox.getPlaces();
     var place = places[0];
     disneyBnB.GLOBAL_LATITUDE = place.geometry.location.k;
     disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.D;
     Backbone.history.navigate('/listings', {trigger:true});
-
   }
 });

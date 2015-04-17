@@ -14,7 +14,7 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
 
   root: function(){
     var v = new disneyBnB.Views.Root({
-      listings: this.collection
+      listings: this.listings
     });
     this._swapView(v);
   },
@@ -41,7 +41,7 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
     var v = new disneyBnB.Views.ListingNew({
       model: listing,
       collection: this.listings
-    })
+    });
     this._swapView(v);
   },
 
