@@ -14,7 +14,7 @@ user1 = User.create(
   email: 'Elsa@Arrendale',
   password: 'password',
   picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-elsa.jpg',
-  description: 'something'
+  description: "From the outside, Elsa looks poised, regal and reserved, but in reality, she lives in fear as she wrestles with a mighty secret—she was born with the power to create ice and snow. It's a beautiful ability, but also extremely dangerous. Haunted by the moment her magic nearly killed her younger sister Anna, Elsa has isolated herself, spending every waking minute trying to suppress her growing powers. Her mounting emotions trigger the magic, accidentally setting off an eternal winter that she can't stop. She fears she's becoming a monster and that no one, not even her sister, can help her."
   )
 
 user2 = User.create(
@@ -22,7 +22,8 @@ user2 = User.create(
   email: 'Russel@Up',
   password: 'password',
   picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-russel.jpg',
-  description: 'something'
+  description: "Russell is a loud, hyperactive, anxious, high-strung, and curious but fun-loving boy. His behavior and personality often annoyed Carl. That fact that he had chocolate with him suggests that he may like candy, that could also explain why he is overweight.
+Russell beholds a spirit that somewhat reminded Carl of Ellie in Russell's curious nature and determination to do the right thing in helping Kevin, and they bonded in a grandfather/grandson-like relationship."
   )
 
 user3 = User.create(
@@ -30,7 +31,7 @@ user3 = User.create(
   email: 'Scar@PrideRock',
   password: 'password',
   picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-scar.jpg',
-  description: 'something'
+  description: "As Mufasa's brother, Scar was next in line to take the throne until Simba came along. Scar's lack of physical prowess is more than made up for by his devious cunning as he plots to take back his birthright with his henchman hyenas by his side. He is a selfish and greedy leader, nearly destroying the pride and the land in which they lived."
   )
 
 user4 = User.create(
@@ -38,7 +39,7 @@ user4 = User.create(
   email: 'Woody@ToyStory',
   password: 'password',
   picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-woody.jpeg',
-  description: 'something'
+  description: "Woody is a really loyal toy who has been Andy's favorite toy since kindergarten. Woody is determined, passionate, and would do anything for his nearest and dearest friends. He considers everyone as a family and he tries his best to keep his family together at all times. Yet, he is a flawed character. He has a lot of bouts of doubt, anger, frustration, uncertainty, and sadness, almost like a human. But despite his jumbled emotions, he tries his very best not to show them to his friends to seem brave and courageous, but he's not afraid to confront or comfort his friends with utmost care."
   )
 
 user5 = User.create(
@@ -46,7 +47,7 @@ user5 = User.create(
   email: 'Jafar@Alladin',
   password: 'password',
   picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-jafar.jpg',
-  description: 'something'
+  description: "Whilst presenting a charming and respectable exterior to the Sultan and the people of Agrabah, he secretly holds everyone around him in contempt and manipulates the Sultan by means of hypnotizing him with a magical snake-headed staff, which he always carries on his person. Even regarding his desiring marriage for Jasmine afterwards, it was solely so he could gain control of the throne and intended to kill her soon thereafter—though he later reneges on this in an attempt to make her his queen consort. He's traveled widely and amassed a wide knowledge of magical artifacts and legends. Until he uses Genie's powers to become a sorcerer, however, his magical abilities are limited to the use of such artifacts as he's collected, and his prowess as an accomplished alchemist."
   )
 
 listing1 = Listing.create(
