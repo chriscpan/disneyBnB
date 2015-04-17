@@ -1,8 +1,9 @@
+<% if (listing.users().first()) { %>
 <div class="container-fluid well span6 profile-panel group">
 	<h1>About The Host, <%= listing.users().first().get('username') %></h1>
 	<div class="row-fluid">
       <div class="span2 group" >
-	    <img src="<%= listing.users().first().get('username')%>" class="img-circle">
+	    <img src="<%= listing.users().first().get('picture_url')%>" class="img-circle">
 			<p class='host-description'><%= listing.users().first().get('description') %></p>
       </div>
       <div class="span8">
@@ -20,3 +21,4 @@
       </div>
 	</div>
 </div>
+<% } %>
