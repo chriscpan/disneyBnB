@@ -12,31 +12,41 @@ Image.destroy_all
 user1 = User.create(
   username: 'Elsa',
   email: 'Elsa@Arrendale',
-  password: 'password'
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-elsa.jpg',
+  description: 'something'
   )
 
 user2 = User.create(
   username: 'Russel',
   email: 'Russel@Up',
-  password: 'password'
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-russel.jpg',
+  description: 'something'
   )
 
 user3 = User.create(
   username: 'Scar',
   email: 'Scar@PrideRock',
-  password: 'password'
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-scar.jpg',
+  description: 'something'
   )
 
 user4 = User.create(
   username: 'Woody',
   email: 'Woody@ToyStory',
-  password: 'password'
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-woody.jpeg',
+  description: 'something'
   )
 
 user5 = User.create(
   username: 'Jafar',
   email: 'Jafar@Alladin',
-  password: 'password'
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-jafar.jpg',
+  description: 'something'
   )
 
 listing1 = Listing.create(

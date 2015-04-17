@@ -1,0 +1,23 @@
+<div class="container-fluid well span6 profile-panel group">
+	<% debugger %>
+	<h1>About The Host, <%= listing.users().first().get('username') %></h1>
+	<div class="row-fluid">
+      <div class="span2 group" >
+	    <img src="<%= listing.users().first().get('username')%>" class="img-circle">
+			<p class='host-description'><%= listing.users().first().get('description') %></p>
+      </div>
+      <div class="span8">
+          <h3>User Name: <%= listing.users().first().get('username') %></h3>
+          <h6>Email: <%= listing.users().first().get('email') %></h6>
+      </div>
+
+      <div class="span2">
+          <div class="btn-group">
+              <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" href="#">
+                  Action
+                  <span class="icon-cog icon-white"></span><span class="caret"></span>
+              </a>
+          </div>
+      </div>
+	</div>
+</div>

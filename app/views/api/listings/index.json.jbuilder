@@ -10,6 +10,7 @@ json.array! @listings do |listing|
   json.images listing.images do |image|
     json.extract! image, :id, :listing_id, :image_url
   end
+  json.user listing.owner, :username, :email, :picture_url, :description
 end
 
   # json.location do

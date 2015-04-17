@@ -22,6 +22,13 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
     return this._comments;
   },
 
+  users: function() {
+    if(!this._user) {
+      this._user = new disneyBnB.Collections.Users([], {listing: this});
+    }
+    return this._user;
+  },
+
   // parse: function(jsonResp) {
   //   debugger
   //   if (jsonResp.images) {
@@ -35,6 +42,11 @@ disneyBnB.Models.Listing = Backbone.Model.extend({
     if (jsonResp.comments) {
       this.comments().set(jsonResp.comments, {parse: true});
       delete jsonResp.comments;
+    }
+
+    if (jsonResp.user) {
+      this.users().set(jsonResp.user, {parse: true});
+      delete jsonResp.user;
     }
     return jsonResp;
   }

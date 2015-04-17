@@ -34,7 +34,6 @@ disneyBnB.Views.ListingComments = Backbone.View.extend({
     comment.save( data, {
       success: function() {
         console.log('success!');
-        debugger
         this.listing.comments().add(comment);
       }.bind(this),
       error: function() {

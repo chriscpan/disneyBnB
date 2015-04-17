@@ -14,13 +14,15 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
       listing: this.listing,
       listings: this.listings
     });
+    this.showProfile = new disneyBnB.Views.ListingProfile({
+      listing: this.listing
+    });
   },
 
   render: function() {
     this.$el.html(this.showDescription.render().$el);
-    // var $commentSection = this.$el.find('.panel');
-    // $commentSection.html(this.showComments.render().$el);
     this.$el.append(this.showComments.render().$el);
+    this.$el.append(this.showProfile.render().$el);
     return this;
   }
 });

@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  listing_id :integer          not null
+#  capacity   :integer          not null
+#  start_date :date             not null
+#  end_date   :date             not null
+#  status     :string           not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Reservation < ActiveRecord::Base
   STATUS_STATES = %(APPROVED DENIED PENDING)
 

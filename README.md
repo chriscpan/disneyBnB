@@ -18,8 +18,7 @@ disneyBnB is a clone of airBnB built on Rails and Backbone. Users can:
 - [x] Create comments for locations
 - [ ] Rate locations
 - [x] View details for a location
-- [ ] View and edit your profile
-- [ ] See other's profile
+- [ ] View profiles
 
 ## Design Docs
 * [View Wireframes][views]
