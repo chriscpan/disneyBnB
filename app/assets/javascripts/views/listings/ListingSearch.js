@@ -12,11 +12,11 @@ disneyBnB.Views.ListingSearch = Backbone.View.extend({
     this.createSearchBox();
   },
 
-  // createSearchBoxHome: function(){
-  //   if (window.location.hash === ""){
-  //     disneyBnB.searchBoxHome = new google.maps.places.SearchBox(this.$el.find('input')[0]);
-  //   }
-  // },
+  createSearchBoxHome: function(){
+    if (window.location.hash === ""){
+      disneyBnB.searchBoxHome = new google.maps.places.SearchBox(this.$el.find('input')[0]);
+    }
+  },
 
   createSearchBox: function() {
     disneyBnB.searchBox = new google.maps.places.SearchBox(this.$el.find('input')[0]);
