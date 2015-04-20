@@ -79,7 +79,7 @@ module Api
 
     def listing_params
       params.require(:listing).permit(
-        :price, :capacity, :title, :address, :description)
+        :price, :capacity, :title, :address, :description, :longitude, :latitude)
     end
   end
 end
