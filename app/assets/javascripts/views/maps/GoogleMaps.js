@@ -119,7 +119,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     // disneyBnB.GLOBAL_LATITUDE = place.geometry.location.k;
     // disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.D;
     // Backbone.history.navigate('/listings', {trigger:true});
-    // debugger
     var marker = this._markers[0];
     if (marker) {
       marker.setMap(null);
@@ -147,7 +146,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
       title: place.name,
       position: place.geometry.location
     });
-    debugger
     this._markers[0] = marker;
     // bounds.extend(place.geometry.location);
     // disneyBnB.map.fitBounds(bounds);
