@@ -43,7 +43,6 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       latitude: this.latitude,
       owner_id: user_id
     });
-    debugger
     this.listing.save(data, {
       success: function(){
         console.log('create listing!');
@@ -52,7 +51,6 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       }.bind(this),
       error: function(model, response){
         console.log('error!');
-        debugger
         var errMessage = $('.listing-new-error');
         errMessage.html($('<p>All fields must be filled out!</p>'));
       }.bind(this)

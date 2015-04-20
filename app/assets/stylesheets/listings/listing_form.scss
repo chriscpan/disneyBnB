@@ -2,9 +2,10 @@
   height: 100vh;
 }
 .listing-form {
+  height:100vh;
   padding-right: 10px;
   padding-left: 10px;
-  background-color: #eee;
+  background-color: #ddd;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -35,4 +36,14 @@
 .listing-form div {
   margin-left: 30%;
   margin-right: 30%;
+}
+
+.address-input {
+  font-weight: bold;
+}
+
+div#new-form-search {
+  width: 100%;
+  transform: translatex(-30%);
+  padding-bottom: 20px;
 }
