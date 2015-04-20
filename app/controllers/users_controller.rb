@@ -11,13 +11,12 @@ class UsersController < ApplicationController
       redirect_to "#listings"
     else
       flash.now[:errors] = @user.errors.full_messages
-      render :new
+      redirect_to root_url
     end
   end
 
   def show
     @user = User.find_by_id(params[:id])
-    render :show
   end
 
   private

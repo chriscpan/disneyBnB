@@ -3,8 +3,12 @@ disneyBnB.Views.Root = Backbone.View.extend({
 
   initialize: function(options){
     this.listings = options.listings;
+    // debugger
   },
 
+  events: {
+    'click': 'login'
+  },
 
   render: function(){
     var content = this.template();
@@ -14,6 +18,7 @@ disneyBnB.Views.Root = Backbone.View.extend({
       el: $('.listing-search-home'),
       collection: this.listings
     });
+    // debugger
     google.maps.event.addListener(disneyBnB.searchBox, 'places_changed', this.searchFromHome.bind(this));
     return this;
   },
@@ -24,5 +29,11 @@ disneyBnB.Views.Root = Backbone.View.extend({
     disneyBnB.GLOBAL_LATITUDE = place.geometry.location.k;
     disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.D;
     Backbone.history.navigate('/listings', {trigger:true});
+  },
+
+  login: function(event) {
+    debugger
+    event.preventDefault();
+    console.log('hello');
   }
 });

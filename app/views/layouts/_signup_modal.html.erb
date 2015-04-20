@@ -22,13 +22,6 @@
         <input class='session-button' type="submit" value="Sign Up">
       </form>
 
-      <form action=<%=session_url%> method="post">
-        <%= auth_token_input %>
-          <input type="hidden" name="user[username]" value="Elsa">
-          <input type="hidden" name="user[password]" value="password">
-          <p class='welcome-statements'>Or sign in as Elsa!</p>
-        <input class='session-button guest-button' type="submit" value="Guest Login">
-      </form>
     </div>
   </div>
 </div>
