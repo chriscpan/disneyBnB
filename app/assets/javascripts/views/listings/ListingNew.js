@@ -29,9 +29,8 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       }.bind(this),
       error: function(model, response){
         console.log('error!');
-        var $ul = $('<ul> </ul>');
-        $ul.append($('<li>All fields must be filled out!</li>'));
-        this.$el.prepend($ul);
+        var errMessage = $('.listing-new-error');
+        errMessage.html($('<p>All fields must be filled out!</p>'));
       }.bind(this)
     });
   }

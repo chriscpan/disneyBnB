@@ -6,6 +6,10 @@
   // margin-bottom: 50%;
   color: #fff;
 }
+
+.root-img {
+  width: 100%;
+}
 .welcome-home {
   text-transform: uppercase;
   font-size: 50px;
@@ -34,14 +38,15 @@
   // position: relative;
   // height: 100%;
   width: 100%;
-  min-height: 100%;
-  background: url("https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/up_house.jpg") no-repeat center center;
+  min-height: 120%;
+  // background: url("https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/disney-castle.jpg") no-repeat center center;
   // background-color: black;
   // background-size: contain;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center;
 
 }
 

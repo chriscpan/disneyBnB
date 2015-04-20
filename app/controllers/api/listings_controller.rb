@@ -12,7 +12,7 @@ module Api
 
     def create
       @listing = current_user.listings.new(listing_params)
-
+      # fail
       if @listing.save
         render json: @listing
       else
