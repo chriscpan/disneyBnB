@@ -113,6 +113,39 @@ user13 = User.create(
   picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-ursula.gif',
   description: "Ursula is a very dark and sinister villain with a sense a humor. Ursula is very manipulative and has a talent of making great sense and making persuasive points when trying to strike a deal. Unlike many Disney Villains, most of whom care very little for their followers, Ursula puts her henchmen Flotsam and Jetsam before anything and everyone else. Ursula treats the eels like children and refer to them as 'babies' or 'poopsies'. When the eels are killed accidentally by Ursula because of Ariel, she mourns and takes all of her anger and sadness out on Ariel and attempts to kill her once and for all. She is known to fill the heads of merpeople with deceptions; she feeds Ariel with the lie (or at best half-truth) that men on the surface like silence in women. In fact, Prince Eric loved Ariel's voice, and Ursula manipulated her into giving up precisely the thing that would have let him recognize the mysterious girl who had saved him from the sea. Despite using contracts to get her way, Ursula has little regard for following her end of the bargain. This is demonstrated when immediately after Triton signed away his freedom for Ariel's safety, Ursula claims she'd have no qualms killing Ariel, despite being implied to have promised to not harm Ariel as a condition of the contract, and gleefully tries to in the final battle. The latter instance is possibly due to Ariel being the cause of Flotsam and Jetsam's deaths"
 )
+
+user14 = User.create(
+  username: 'Tony Stark',
+  email: 'Tony@Iron',
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-tony.jpg',
+  description: "Tony Stark is an outgoing man who enjoys drinking and gambling, all the while possessing the capacity to become an expert in thermonuclear astrophysics overnight. As a millionaire playboy, he had enjoyed his extravagant lifestyle, all the while selling and creating new dangerous weapons."
+)
+
+user15 = User.create(
+  username: 'Steve Rogers',
+  email: "Steve@America",
+  password: 'password',
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-steve.jpg',
+  description: "Steve Rogers is a nice and generous young man and he helps out his team whenever possible. He stays true to ideal American values, and would sacrifice his life for any other good citizen. Steve is a courageous and independent leader for his team. His personality reflects an ideal person consisting of good morals, a positive attitude with a selfless mind. He also does not take kindly to reckless behavior or suffer fools gladly."
+)
+
+user16 = User.create(
+  username: 'Thor Odinson',
+  email: 'Thor@Odin',
+  password: "password",
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-thor.jpeg',
+  description: "He has a large amount of respect for family, who have defined his personality -- his father Odin and his mother Frigga, who he loves very much. Had it not been for his wise father, he would still be full of arrogancy and irresponsibility, a fact that he is well aware of. His mother's similarly wise but gentle touch taught him to fight for good. He has a complicated relationship with his troublemaking brother Loki, upset with him for the trouble he has caused on Earth and Asgard. However, he does care for his brother, and wishes for him to stop his dangerously mischievous ways. However, he is not above fighting his brother if it means protecting others."
+)
+
+user17 = User.create(
+  username: 'Natasha Romanoff',
+  email: 'Natasha@Widow',
+  password: "password",
+  picture_url: 'https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/user-natasha.jpg',
+  description: "Natasha Romanoff is a Level 7 S.H.I.E.L.D. operative, working there since Hawkeye, alias Agent Clint Barton, was sent to kill her, but decided to bring her in to work for them, instead. She works undercover as a legal aid at Stark Industries in Iron Man 2, after being sent there to collect intel on Tony Stark. In the 2012 Marvel film the Avengers, she works together with Captain America (Steve Rogers), Tony Stark (Iron Man), Thor, Bruce Banner (the Hulk), and Clint Barton (Hawkeye) to defeat Loki and his army."
+)
+
 listing1 = Listing.create(
   price: 100,
   capacity: 2,
@@ -403,39 +436,109 @@ listing13 = Listing.create(
   latitude: 37.886513,
   longitude: -122.586953
 )
-  image1201 = Image.create(
+  image1301 = Image.create(
     listing_id: 13,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/mordu-forest-room-1.jpg"
   )
-  image1202 = Image.create(
+  image1302 = Image.create(
     listing_id: 13,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/mordu-forest-room-2.jpg"
   )
-  image1203 = Image.create(
+  image1303 = Image.create(
     listing_id: 13,
     image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/mordu-forest-room-3.jpg"
   )
 
-# listing14 = Listing.create(
-#   price: 150,
-#   capacity: 3,
-#   title: "Imperial City",
-#   address: "123 Dragon Way",
-#   description: "The city serves as the capital of China and is the location of the Emperor's Palace, also known as the Forbidden City. According to the film, one of the quickest ways to the Imperial City is to travel through a small mountain pass.
-# In the film, the Chinese people hold a celebration in the Imperial City to celebrate the defeat of the Huns. However, a small group of Huns had survived and secretly entered the city by hiding in a Chinese dragon puppet."
-#   owner_id: 12,
-#   latitude: 37.792993,
-#   longitude: -122.406649
-# )
-#   image1201 = Image.create(
-#     listing_id: 14,
-#     image_url: ""
-#   )
-#   image1202 = Image.create(
-#     listing_id: 14,
-#     image_url: ""
-#   )
-#   image1203 = Image.create(
-#     listing_id: 14,
-#     image_url: ""
-#   )
+listing14 = Listing.create(
+  price: 800,
+  capacity: 8,
+  title: "Stark Tower",
+  address: "123 Iron Way",
+  description: "Located in Midtown Manhattan, New York City, USA, the complex is named after its owner Tony Stark, who is the alter ego of the superhero Iron Man. The structure is composed of a 93-story Main Tower flanked by a 35-story South Building and 55-story North Building. Located at the top of the Main Tower was the Watchtower of the superhero The Sentry, but it has been replaced by Heimdall's observatory. The Main Tower is informally known as Avengers Tower, as it serves as the headquarters of the superhero team, the Avengers, similar to the Avengers Mansion.",
+  owner_id: 14,
+  latitude: 40.808179,
+  longitude: -73.959546
+)
+  image1401 = Image.create(
+    listing_id: 14,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/stark-tower-room-1.jpg"
+  )
+  image1402 = Image.create(
+    listing_id: 14,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/stark-tower-room-2.jpg"
+  )
+  image1403 = Image.create(
+    listing_id: 14,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/stark-tower-room-3.jpg"
+  )
+
+listing15 = Listing.create(
+  price: 400,
+  capacity: 3,
+  title: "Triskelion",
+  address: "123 Shield St",
+  description: "In the Ultimate Marvel universe, the Triskelion is the island headquarters of S.H.I.E.L.D. and formerly inhabited by the Ultimates. The Triskelion's architectural design was planned and layout by architect Frank Gehry. The Triskelion was originally designed by British architect Norman Foster and planned to have mobility like the Helicarrier, but never came to be due to monetary problems. The Triskelion was partially, but significantly, destroyed by the Liberators when its super-soldiers pushed and scuttled the S.H.I.E.L.D. Helicarrier onto the facility, which the Scarlet Witch (who was present in Nick Fury's office) used her powers in saving only the first three floors of the building and everyone within them.",
+  owner_id: 15,
+  latitude: 40.818833,
+  longitude: -73.898778
+)
+  image1501 = Image.create(
+    listing_id: 15,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/hub-room-1.jpg"
+  )
+  image1502 = Image.create(
+    listing_id: 15,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/triskelion-room-2.jpg"
+  )
+  image1503 = Image.create(
+    listing_id: 15,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/triskelion-room-3.jpg"
+  )
+
+
+listing16 = Listing.create(
+  price: 900,
+  capacity: 4,
+  title: "Gate to Asgard",
+  address: "123 Hammer St",
+  description: "Asgard is the home realm of the Asgardians. It is ruled by Odin the Allfather; other notable inhabitants include Thor, Loki and Frigga. It is based on the Norse mythological world of the same name.
+Asgard is a celestial planetoid in an unknown part of the Marvel Universe. It is not a planet like Earth or Jotunheim, but is instead a flat, mystical realm filled with cliffs and waterfalls that pour out space.",
+  owner_id: 16,
+  latitude: 40.772309,
+  longitude: -73.973279
+)
+  image1601 = Image.create(
+    listing_id: 16,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/asgard-room-1.png"
+  )
+  image1602 = Image.create(
+    listing_id: 16,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/asgard-room-2.jpg"
+  )
+  image1603 = Image.create(
+    listing_id: 16,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/asgard-room-3.jpg"
+  )
+
+listing17 = Listing.create(
+  price: 500,
+  capacity: 3,
+  title: "S.H.I.E.L.D Aircraft",
+  address: "123 Secret St",
+  description: "The Helicarrier, an aircraft carrier specifically designed to be itself capable of independent powered flight in addition to the standard functions of aircraft carriers, is the world headquarters and signature capital ship of the extra-governmental intelligence/defense agency S.H.I.E.L.D..Built by Stark Industries and designed by Tony Stark, Dr. Reed Richards, and former X-Man Forge. In addition to housing wings of fighters and other aircraft, the Helicarrier bristles with advanced weaponry, including an intercontinental ballistic missile.",
+  owner_id: 17,
+  latitude: 40.669008,
+  longitude: -74.039197
+)
+  image1701 = Image.create(
+    listing_id: 17,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/aircraft-room-1.png"
+  )
+  image1702 = Image.create(
+    listing_id: 17,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/aircraft-room-2.jpg"
+  )
+  image1703 = Image.create(
+    listing_id: 17,
+    image_url: "https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/aircraft-room-3.jpeg"
+  )
