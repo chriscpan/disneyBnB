@@ -85,3 +85,54 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+.popular-place-heading {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.main-header {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.sub-header {
+  font-size: 18px;
+}
+
+.popular-place-images {
+  height: 400px;
+  padding-top: 30px;
+}
+
+.popular-place-one {
+  width: 44%;
+  height: 300px;
+  float: left;
+  background-color: #ddd;
+  margin-right: 3%;
+  margin-left: 3%;
+  background-size: cover;
+  background-position: center;
+  // background: url("https://s3-us-west-1.amazonaws.com/disneybnb/disneybnb-images/san-fransokyo-room-1.jpg")
+}
+
+.popular-place-two {
+  width: 44%;
+  height: 300px;
+  float: left;
+  background-color: #ddd;
+  margin-right: 3%;
+  margin-left: 3%;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.pop-place-one-title {
+  text-align: center;
+  color: white;
+  transform: translateY(300%);
+  font-size: 32px;
+  font-weight: bold;
+}

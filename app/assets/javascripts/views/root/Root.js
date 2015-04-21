@@ -3,6 +3,7 @@ disneyBnB.Views.Root = Backbone.View.extend({
 
   initialize: function(options){
     this.listings = options.listings;
+    this.listenTo(this.listings, 'sync', this.render.bind(this))
   },
 
   events: {
