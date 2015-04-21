@@ -10,10 +10,14 @@
           <img class="listing-picture" src="<%= listing.attributes.images[0].image_url %>" />
         <% } %>
       </a>
-      <a href="#/listings/<%= listing.get('id') %>">
-        <%= listing.escape('title') %>
-      </a>
-      <p class=listing-description><%=listing.escape('address') %></p>
+      <div class="listing-descriptions">
+        <a href="#/listings/<%= listing.get('id') %>">
+          <%= listing.escape('title') %>
+        </a>
+        <p class=listing-description><%=listing.escape('address') %></p>
+        <div class='host-avatar' style="background-image: url(<%= listing.users().first().get('picture_url')%>)"/>
+        </div>
+      </div>
     </li>
   <% }) %>
   </ul>
