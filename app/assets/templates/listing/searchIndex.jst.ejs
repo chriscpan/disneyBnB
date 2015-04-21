@@ -7,6 +7,9 @@
     <li class='listings'>
       <a class='picture-container' href="#/listings/<%= listing.get('id') %>">
         <% if (listing.attributes.images) { %>
+          <div class='price-tag'>
+            <span class='listing-price-tag'> $<%= listing.get('price') %> </span>
+          </div>
           <img class="listing-picture" src="<%= listing.attributes.images[0].image_url %>" />
         <% } %>
       </a>

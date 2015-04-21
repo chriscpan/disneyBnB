@@ -82,4 +82,21 @@
   transform:  translateY(-108px);
   margin-right: 25px;
   border-radius: 50px;
+  border: 2px solid white;
+}
+
+.price-tag {
+  width:20%;
+  height: 50px;
+  position: absolute;
+  transform: translateY(270%);
+  background-color: rgba(60,63,64,0.9);
+  z-index: 5;
+}
+
+.listing-price-tag {
+  line-height: 2.5;
+  padding-left: 5px;
+  font-size: 22px;
+  color: white;
 }
