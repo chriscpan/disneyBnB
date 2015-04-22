@@ -18,7 +18,9 @@
           <%= listing.escape('title') %>
         </a>
         <p class=listing-description><%=listing.escape('address') %></p>
-        <div class='host-avatar' style="background-image: url(<%= listing.users().first().get('picture_url')%>)"/>
+        <% if (listing.users().first()) { %>
+          <div class='host-avatar' style="background-image: url(<%= listing.users().first().get('picture_url')%>)"/>
+        <% } %>
         </div>
       </div>
     </li>
