@@ -21,7 +21,7 @@ disneyBnB.Routers.Router = Backbone.Router.extend({
   },
 
   index: function(){
-    // this.listings.fetch();
+    this.listings.fetch();
     var v = new disneyBnB.Views.ListingIndex({
       collection: this.listings
     });

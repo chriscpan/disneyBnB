@@ -13,6 +13,9 @@ json.extract! @user, :id, :username, :email, :picture_url
 
 json.listings @user.listings do |listing|
   json.extract! listing, :owner_id, :price, :capacity, :title, :address, :description
+  json.images listing.images do |image|
+    json.extract! image, :listing_id, :image_url
+  end
 end
 
 json.reservations @user.reservations do |reservation|

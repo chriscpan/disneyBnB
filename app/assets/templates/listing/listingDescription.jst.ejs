@@ -87,10 +87,10 @@
       <p class="description"><%= listing.get('description') %></p>
     </div>
     <div class='image-container group'>
-        <% if (picture) { %>
+        <% if (picture && picture.length > 1) { %>
           <div class='image-one' style="background-image: url(<%= picture[1].image_url%>)"/>
         <% } %>
-        <% if (picture) { %>
+        <% if (picture && picture.length > 2) { %>
           <div class='image-two' style="background-image: url(<%= picture[2].image_url%>)"/>
         <% } %>
     </div>

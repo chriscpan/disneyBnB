@@ -6,11 +6,11 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
     this.listings = options.collection;
     this.listing = options.model;
     this.listenTo(this.model, 'sync', this.render);
-    // this.initCloudinary().bind(this);
+    // this.initCloudinary();
   },
 
   events: {
-    'submit': 'createListing',
+    'click .make-listing-button': 'createListing',
     // 'click #upload_widget_opener': 'initCloudinary'
   },
 
@@ -26,6 +26,7 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       listing: this.listing
     });
     google.maps.event.addListener(disneyBnB.searchBoxForm, 'places_changed', this.getLatLng.bind(this));
+    this.initCloudinary();
     return this;
   },
 
@@ -38,6 +39,10 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
 
   createListing: function(event){
     event.preventDefault();
+    if (!this.new_image){
+      $('.listing-new-error').html($('<p>All fields must be filled out!</p>'));
+      return ;
+    }
     var data = $(this.$el.find('.listing-form')).serializeJSON();
     var user_id = disneyBnB.current_user.id;
     this.listing.set({
@@ -45,10 +50,36 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       latitude: this.latitude,
       owner_id: user_id
     });
+    debugger
     this.listing.save(data, {
       success: function(){
         this.listings.add(this.listing, {merge: true});
-        Backbone.history.navigate('listing/' + this.listing.id, {trigger: true});
+        this.new_image.set({
+          listing_id: this.listing.id,
+        });
+        this.new_image.save();
+        this.listing.images().add(this.new_image);
+        debugger
+        if (this.new_image2) {
+          this.new_image2.set({
+            listing_id: this.listing.id
+          });
+          this.new_image2.save();
+          this.listing.images().add(this.new_image2);
+        }
+        if (this.new_image3) {
+          this.new_image3.set({
+            listing_id: this.listing.id
+          });
+          this.image3.save();
+          this.listing.images().add(this.new_image3);
+        }
+
+        this.listings.fetch({
+          success: function() {
+            Backbone.history.navigate('/listings', {trigger: true});
+          }
+        });
       }.bind(this),
       error: function(model, response){
         var errMessage = $('.listing-new-error');
@@ -57,16 +88,31 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
     });
   },
 
-  // initCloudinary: function(event){
-  //   event.preventDefault();
-  //   cloudinary.openUploadWidget({
-  //     cloud_name: 'dbmzyvbq4',
-  //     upload_preset: 'tylaqbxd',
-  //     multiple: true,
-  //     max_files: 3,
-  //   },
-  //   function(error, result) {
-  //     debugger
-  //   });
-  // }
+  initCloudinary: function(event){
+    this.$('#upload_widget_opener').cloudinary_upload_widget({
+          cloud_name: 'dbmzyvbq4',
+          upload_preset: 'tylaqbxd',
+          multiple: true,
+          max_files: 3,
+    },
+   function(error, result) {
+    var pic_url = result[0].secure_url;
+
+      this.new_image = new disneyBnB.Models.Image({
+        image_url: pic_url
+      });
+
+      if (result[1]) {
+        this.new_image2 = new disneyBnB.Models.Image({
+          image_url: result[1].secure_url
+        });
+      }
+
+      if (result[2]) {
+        this.new_image3 = new disneyBnB.Models.Image({
+          image_url: result[2].secure_url
+        });
+      }
+    }.bind(this));
+  }
 });

@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :current_users, only: [:index]
     resources :reservations, only: [:create]
     resources :comments, only: [:create]
+    resources :images, only: [:create]
   end
 end
