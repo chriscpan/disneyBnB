@@ -6,10 +6,12 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
     this.listings = options.collection;
     this.listing = options.model;
     this.listenTo(this.model, 'sync', this.render);
+    // this.initCloudinary().bind(this);
   },
 
   events: {
-    'submit': 'createListing'
+    'submit': 'createListing',
+    // 'click #upload_widget_opener': 'initCloudinary'
   },
 
   render: function() {
@@ -45,15 +47,26 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
     });
     this.listing.save(data, {
       success: function(){
-        console.log('create listing!');
         this.listings.add(this.listing, {merge: true});
         Backbone.history.navigate('listing/' + this.listing.id, {trigger: true});
       }.bind(this),
       error: function(model, response){
-        console.log('error!');
         var errMessage = $('.listing-new-error');
         errMessage.html($('<p>All fields must be filled out!</p>'));
       }.bind(this)
     });
-  }
+  },
+
+  // initCloudinary: function(event){
+  //   event.preventDefault();
+  //   cloudinary.openUploadWidget({
+  //     cloud_name: 'dbmzyvbq4',
+  //     upload_preset: 'tylaqbxd',
+  //     multiple: true,
+  //     max_files: 3,
+  //   },
+  //   function(error, result) {
+  //     debugger
+  //   });
+  // }
 });
