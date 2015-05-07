@@ -27,8 +27,8 @@ disneyBnB.Views.Root = Backbone.View.extend({
   searchFromHome: function() {
     var places = disneyBnB.searchBoxHome.getPlaces();
     var place = places[0];
-    disneyBnB.GLOBAL_LATITUDE = place.geometry.location.k;
-    disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.D;
+    disneyBnB.GLOBAL_LATITUDE = place.geometry.location.A;
+    disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.F;
     // Backbone.history.navigate('/listings', {trigger:true});
   },
 

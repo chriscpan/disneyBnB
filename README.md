@@ -1,8 +1,8 @@
 # disneyBnB
 
-[Heroku link][heroku]
+[Live Link][link]
 
-[heroku]: https://disneybnb.herokuapp.com/
+[link]: https://disneybnb.herokuapp.com/
 
 ## Minimum Viable Product
 disneyBnB is a clone of airBnB built on Rails and Backbone. Users can:
@@ -20,12 +20,6 @@ disneyBnB is a clone of airBnB built on Rails and Backbone. Users can:
 - [x] View details for a location
 - [x] View profiles
 
-## Design Docs
-* [View Wireframes][views]
-* [DB schema][schema]
-
-[views]: ./docs/views.md
-[schema]: ./docs/schema.md
 
 ## Implementation Timeline
 
