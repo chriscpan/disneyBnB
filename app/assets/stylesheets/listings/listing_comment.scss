@@ -24,7 +24,7 @@
 .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
 }
 .actionBox .form-group input {
-    width: calc(100% - 121px);
+    width: calc(100% - 54px);
     display: inline-block;
 }
 .taskDescription {
@@ -80,6 +80,24 @@ div.actionBox {
   margin-left: 20px;
   display: inline-block;
   position: absolute;
+  button {
+    background-image: url('https://s3-us-west-1.amazonaws.com/yasmirtudoachimandirochichi/junk/arrow.png');
+    width: 34px;
+    height: 34px;
+    border: none;
+    opacity: 0.3;
+    transition: opacity .3s ease;
+    background-size: cover;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+html > body > .backdrop > #main > div > div.panel > form > div.actionBox > div > div > #add-comment-button {
+  &:hover {
+    background-color: transparent !important;
+  }
 }
 
 .comment-error-message {
