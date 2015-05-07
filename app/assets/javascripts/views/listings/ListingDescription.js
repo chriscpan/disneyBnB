@@ -46,9 +46,13 @@ disneyBnB.Views.ListingDescription = Backbone.View.extend({
 
       }.bind(this),
       error: function() {
-        $p = $('<p>Invalid Reservation, please try again</p>');
-        $('.reserve-message').html($p);
-        console.log('error!');
+        if (disneyBnB.current_user.get('id')) {
+          $p = $('<p>Invalid Reservation, please try again</p>');
+          console.log('error!');
+        } else {
+          $p = $('<p> You need to be logged in to do that</p>');
+        }
+          $('.reserve-message').html($p);
       }.bind(this)
     });
   },
