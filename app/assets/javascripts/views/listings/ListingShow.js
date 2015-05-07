@@ -19,6 +19,10 @@ disneyBnB.Views.ListingShow = Backbone.View.extend({
     });
   },
 
+  // events: {
+  //   'hover .picture-container': func
+  // },
+
   render: function() {
     this.$el.html(this.showDescription.render().$el);
     this.$el.append(this.showComments.render().$el);
