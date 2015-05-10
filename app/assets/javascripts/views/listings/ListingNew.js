@@ -6,12 +6,10 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
     this.listings = options.collection;
     this.listing = options.model;
     this.listenTo(this.model, 'sync', this.render);
-    // this.initCloudinary();
   },
 
   events: {
     'click .make-listing-button': 'createListing',
-    // 'click #upload_widget_opener': 'initCloudinary'
   },
 
   render: function() {
@@ -50,7 +48,6 @@ disneyBnB.Views.ListingNew = Backbone.View.extend({
       latitude: this.latitude,
       owner_id: user_id
     });
-    debugger
     this.listing.save(data, {
       success: function(){
         this.listings.add(this.listing, {merge: true});
