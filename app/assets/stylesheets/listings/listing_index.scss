@@ -51,9 +51,10 @@
   height: 214px;
   width: auto;
   display: block;
-  background-color: #006699;
   overflow: hidden;
   transform: translateX(-10%);
+  background-size: cover;
+  background-position: center;
 }
 
 .listings a {

@@ -10,7 +10,7 @@
           <div class='price-tag'>
             <span class='listing-price-tag'> $<%= listing.get('price') %> </span>
           </div>
-          <img class="listing-picture" src="<%= listing.attributes.images[0].image_url %>" />
+          <div class="listing-picture" style="background-image: url(<%= listing.attributes.images[0].image_url %>)" />
         <% } %>
       </a>
       <div class="listing-descriptions">
