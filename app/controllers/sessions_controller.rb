@@ -17,5 +17,8 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     redirect_to root_url
+    # session = Session.find(params[:id])
+    # session.destroy
+    # redirect_to new_session_url
   end
 end
