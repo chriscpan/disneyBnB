@@ -30,7 +30,8 @@
             <!-- <li><a href="#">Separated link</a></li> -->
           </ul>
         </li>
-        <li>  <%= link_to "Log Out", session_url, method: :delete %></li>
+        <li>  <%= link_to "Log Out", sessions_url(Session.find_by_token(session[:session_token]
+          )), method: :delete %></li>
       </ul>
     </div>
   </div>
