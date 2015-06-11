@@ -15,7 +15,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'backbone-on-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'geokit-rails'
-gem 'newrelic_rpm'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

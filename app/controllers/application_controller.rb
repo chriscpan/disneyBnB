@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    return nil if session[:token].nil?
-    return nil if Session.find_by_token(session[:token]).nil?
-    @current_user ||= Session.find_by_token(session[:token]).user
+    # return nil if session[:session_token].nil?
+    # return nil if Session.find_by_token(session[:session_token]).nil?
+    # @current_user ||= Session.find_by_token(session[:session_token]).user
     # fail
 
-    # return nil unless session[:token]
-    # @current_user ||= User.find_by_session_token(session[:token])
+    return nil unless session[:session_token]
+    @current_user ||= User.find_by_session_token(session[:session_token])
   end
 
   def signed_in?
@@ -26,13 +26,13 @@ class ApplicationController < ActionController::Base
     @session = Session.create(user: user, token: SecureRandom.urlsafe_base64)
     # fail
     @current_user = user
-    # session[:token] = user.reset_session_token!
-    session[:token] = @session.token
+    session[:session_token] = user.reset_session_token!
+    # session[:session_token] = @session.token
   end
 
   def sign_out
     current_user.try(:reset_session_token!)
-    session[:token] = nil
+    session[:session_token] = nil
   end
 
   def require_signed_in!
