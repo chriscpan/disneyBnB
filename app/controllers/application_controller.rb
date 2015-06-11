@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def sign_in(user)
-    @session = Session.create(user: user, token: SecureRandom.urlsafe_base64)
+    # @session = Session.create(user: user, token: SecureRandom.urlsafe_base64)
     # fail
     @current_user = user
     session[:session_token] = user.reset_session_token!
