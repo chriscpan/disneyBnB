@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
     redirect_to root_url
     # session = Session.find(params[:id])
     # session.destroy
-    # redirect_to new_session_url
+    # redirect_to new_sessions_url
   end
 end
