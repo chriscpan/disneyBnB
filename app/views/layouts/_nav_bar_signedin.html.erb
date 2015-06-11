@@ -28,9 +28,10 @@
             <!-- <li><a href="#">Something else here</a></li> -->
             <li class="divider"></li>
             <!-- <li><a href="#">Separated link</a></li> -->
+            <%= fail %>
           </ul>
         </li>
-        <li>  <%= link_to "Log Out", sessions_url(Session.find_by_token(session[:session_token]
+        <li>  <%= link_to "Log Out", sessions_url(Session.find_by_token(session[:token]
           )), method: :delete %></li>
       </ul>
     </div>
