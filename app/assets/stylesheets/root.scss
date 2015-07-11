@@ -64,12 +64,12 @@
   width: 500px;
 }
 .input-groups .input-group.listing-search-home input {
-  width: 467px;
+  width: 470px;
   border-radius: 0;
 }
 .input-groups {
   margin: 0 auto;
-  width: 800px;
+  width: 804px;
 }
 
 .input-group {
@@ -99,6 +99,10 @@
   border-bottom-right-radius: 5px;
   background-color: #ff5a5f;
   color: white;
+}
+
+.root-submit input:hover {
+  background-color: #ff7e82;
 }
 
 #check-in {
