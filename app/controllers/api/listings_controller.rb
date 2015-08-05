@@ -12,7 +12,6 @@ module Api
 
     def create
       @listing = current_user.listings.new(listing_params)
-      # fail
       if @listing.save
         render json: @listing
       else
@@ -42,8 +41,6 @@ module Api
     private
 
     def filter_options
-      # Good to cover our bases with some defaults, in case no query string comes
-      # in. :)
       options = params[:filter_data] || {}
       defaults = {
         'lat' => [37.67767358309138, 37.8887756788066],
@@ -54,8 +51,6 @@ module Api
     end
 
     def filter_listings(filter_data)
-      # At the moment this only filters by latitude and longitude, but we can
-      # expand it later to cover additional constraints.
       binds = {
         :lat_min => filter_data['lat'][0],
         :lat_max => filter_data['lat'][1],
@@ -64,7 +59,6 @@ module Api
       }
 
       if binds[:lng_min].to_f > binds[:lng_max].to_f
-        # Wrap around the International Date Line
         Listing.where(<<-SQL, binds)
           listings.longitude BETWEEN :lng_min AND 180
             OR listings.longitude BETWEEN -180 AND :lng_max

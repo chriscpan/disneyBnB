@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
 
   def create
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
-    # fail
     if @user
       sign_in(@user)
       redirect_to "#listings"

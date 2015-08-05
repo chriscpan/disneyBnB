@@ -9,7 +9,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     this.listenTo(this.collection, 'remove', this.removeMarker);
   },
 
-  // longitude: D, Latitude: k
   initMap: function () {
     var lat = 37.7833;
     var lng = -122.4167;
@@ -21,8 +20,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
       center: { lat: lat, lng: lng},
       zoom: 12
     };
-    // disneyBnB.GLOBAL_LONGITUDE = null;
-    // disneyBnB.GLOBAL_LATITUDE = null;
     disneyBnB.map = new google.maps.Map(this.el, disneyBnB.mapOptions);
     this.collection.each(this.addMarker.bind(this));
     this.attachMapListeners();
@@ -32,7 +29,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     google.maps.event.addListener(disneyBnB.map, 'bounds_changed', this.setBounds.bind(this));
     google.maps.event.addListener(disneyBnB.searchBox, 'places_changed', this.addPin.bind(this));
     google.maps.event.addListener(disneyBnB.map, 'idle', this.search.bind(this));
-    // google.maps.event.addListener(this._map, 'click', this.createListing.bind(this));
   },
 
   showMarkerInfo: function (event, marker) {
@@ -71,19 +67,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     this._markers[listing.id] = marker;
   },
 
-  // createListing: function (event) {
-  //   var listing = new GoogleMapsDemo.Models.Listing({
-  //     lat: event.latLng.lat(),
-  //     lng: event.latLng.lng()
-  //   });
-  //
-  //   listing.save({}, {
-  //     success: function () {
-  //       this.collection.add(listing);
-  //     }.bind(this)
-  //   });
-  // },
-
   search: function () {
     var mapBounds = disneyBnB.map.getBounds();
     var ne = mapBounds.getNorthEast();
@@ -114,9 +97,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
   },
 
   addPin: function() {
-    // var places = searchBoxHome.getPlaces();
-    // var place = places[0];
-    // Backbone.history.navigate('/listings', {trigger:true});
     var marker = this._markers[0];
     if (marker) {
       marker.setMap(null);
@@ -131,7 +111,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
     var place = places[0];
     disneyBnB.GLOBAL_LATITUDE = place.geometry.location.A;
     disneyBnB.GLOBAL_LONGITUDE = place.geometry.location.F;
-    debugger
     var image = {
       url: place.icon,
       size: new google.maps.Size(71,71),
@@ -147,8 +126,6 @@ disneyBnB.Views.GoogleMaps = Backbone.View.extend({
       position: place.geometry.location
     });
     this._markers[0] = marker;
-    // bounds.extend(place.geometry.location);
-    // disneyBnB.map.fitBounds(bounds);
     disneyBnB.map.setCenter(place.geometry.location);
     disneyBnB.map.setZoom(12);
   }

@@ -7,10 +7,6 @@ disneyBnB.Views.searchIndex = Backbone.View.extend({
     this.listenTo(this.collection, 'sync', this.render);
   },
 
-  // events: {
-  //   'hover .picture-container': func
-  // },
-
   render: function(){
     var content = this.template({
       listings: this.collection

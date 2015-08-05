@@ -5,7 +5,6 @@ module Api
         if @reservation.save
           render json: @reservation
         else
-          # byebug
           render json:
           @reservation.errors.full_messages, status: :unprocessable_entity
         end
