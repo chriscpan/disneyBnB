@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     # @current_user ||= Session.find_by_token(session[:session_token]).user
     # fail
 
-    return nil unless session[:session_token]
+    # return nil unless session[:session_token]
     @current_user ||= User.find_by_session_token(session[:session_token])
   end
 
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def sign_in(user)
-    @session = Session.create(user: user, token: SecureRandom.urlsafe_base64)
+    # @session = Session.create(user: user, token: SecureRandom.urlsafe_base64)
     @current_user = user
     session[:session_token] = user.reset_session_token!
     # session[:session_token] = @session.token
